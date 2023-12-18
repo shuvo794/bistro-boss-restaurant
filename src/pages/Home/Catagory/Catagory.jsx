@@ -5,13 +5,18 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-// import './styles.css';
+import catagory1 from '../../../assets/home/slide1.jpg'
+import catagory2 from '../../../assets/home/slide2.jpg'
+import catagory3 from '../../../assets/home/slide3.jpg'
+import catagory4 from '../../../assets/home/slide4.jpg'
+import catagory5 from '../../../assets/home/slide5.jpg'
 
 
 
 function Catagory() {
   return (
-    <Swiper
+   <div className='mb-24'>
+     <Swiper
     slidesPerView={4}
     spaceBetween={30}
     centeredSlides={true}
@@ -21,16 +26,30 @@ function Catagory() {
     modules={[Pagination]}
     className="mySwiper"
   >
-    <SwiperSlide>Slide 1</SwiperSlide>
-    <SwiperSlide>Slide 2</SwiperSlide>
-    <SwiperSlide>Slide 3</SwiperSlide>
-    <SwiperSlide>Slide 4</SwiperSlide>
-    <SwiperSlide>Slide 5</SwiperSlide>
-    <SwiperSlide>Slide 6</SwiperSlide>
-    <SwiperSlide>Slide 7</SwiperSlide>
-    <SwiperSlide>Slide 8</SwiperSlide>
-    <SwiperSlide>Slide 9</SwiperSlide>
+    <SwiperSlide>
+    <img src={catagory2} alt="" />
+    <h2 className='text-4xl uppercase text-center -mt-14 text-white'>Pizza</h2>
+    </SwiperSlide>
+    <SwiperSlide>
+        <img src={catagory1} alt="" />
+        <h2 className='text-4xl uppercase text-center -mt-14 text-white'>Salad</h2>
+    </SwiperSlide>
+    
+    <SwiperSlide>
+    <img src={catagory3} alt="" />
+    <h2 className='text-4xl uppercase text-center -mt-14 text-white'>Soups</h2>
+    </SwiperSlide>
+    <SwiperSlide>
+    <img src={catagory4} alt="" />
+    <h2 className='text-4xl uppercase text-center -mt-14 text-white'>Cake</h2>
+    </SwiperSlide>
+    <SwiperSlide>
+    <img src={catagory5} alt="" />
+    <h2 className='text-4xl uppercase text-center -mt-14 text-white'>Salad</h2>
+    </SwiperSlide> 
+    
   </Swiper>
+   </div>
   )
 }
 
