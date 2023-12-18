@@ -1,6 +1,7 @@
 import Banner from "../Banner/Banner"
 import BistroSection from "../BistroSection/BistroSection"
 import Catagory from "../Catagory/Catagory"
+import PopulerMenu from "../PopulerMenu/PopulerMenu"
 
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       <Banner></Banner>
       <Catagory></Catagory>
       <BistroSection></BistroSection>
+      <PopulerMenu></PopulerMenu>
     </div>
   )
 }
