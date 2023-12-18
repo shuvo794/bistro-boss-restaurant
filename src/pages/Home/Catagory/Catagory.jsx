@@ -10,12 +10,18 @@ import catagory2 from '../../../assets/home/slide2.jpg'
 import catagory3 from '../../../assets/home/slide3.jpg'
 import catagory4 from '../../../assets/home/slide4.jpg'
 import catagory5 from '../../../assets/home/slide5.jpg'
+import SectionTittle from '../../../Components/SectionTittle/SectionTittle';
 
 
 
 function Catagory() {
   return (
-   <div className='mb-24'>
+   <section className='mb-24'>
+    <SectionTittle
+    subHeading={"From 11:00am to 10:00pm"}
+    heading={"ORDER ONLINE"}
+    >
+    </SectionTittle>
      <Swiper
     slidesPerView={4}
     spaceBetween={30}
@@ -49,7 +55,7 @@ function Catagory() {
     </SwiperSlide> 
     
   </Swiper>
-   </div>
+   </section>
   )
 }
 
