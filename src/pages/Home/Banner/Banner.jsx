@@ -10,7 +10,7 @@ import img6 from '../../../assets/banner/06.png'
 
 function Banner() {
   return (
-    <Carousel>
+    <Carousel >
                 <div>
                     <img src={img1} />
                    
@@ -35,14 +35,7 @@ function Banner() {
                     <img src={img6} />
                    
                 </div>
-                {/* <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
-                </div>
-                <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
-                </div> */}
+                
             </Carousel>
   )
 }

@@ -1,8 +1,13 @@
+import Banner from "../Banner/Banner"
+import Catagory from "../Catagory/Catagory"
 
 
 function Home() {
   return (
-    <div>This Home page</div>
+    <div>
+      <Banner></Banner>
+      <Catagory></Catagory>
+    </div>
   )
 }
 
