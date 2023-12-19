@@ -1,14 +1,10 @@
 
-// import chif from "../../../assets/home/chef-service.jpg"
+
 import './BistroSection.css'
 function BistroSection() {
   return (
-    <div className="bistro-boss max-w-screen-xl">
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
+    <div className="bistro-boss max-w-screen-xl p-24">
+  
   
   <div className='box-bg max-w-screen-xl'>
     <h3 className='text-center mb-2'>Bistro Boss</h3>
