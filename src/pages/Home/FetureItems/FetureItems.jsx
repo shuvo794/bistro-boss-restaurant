@@ -1,15 +1,17 @@
 import SectionTittle from "../../../Components/SectionTittle/SectionTittle"
 import featured from '../../../assets/home/featured.jpg'
+import  './FetureItems.css'
 
 function FetureItems() {
   return (
-    <div>
+    <div className="Feture-items text-white pt-5 ">
              <SectionTittle
              heading={"FROM OUR MENU"}
              subHeading={"Check it out"}
+            
              ></SectionTittle>
 
-             <div className="md:flex justify-center items-center py-8 px-16">
+             <div className="md:flex justify-center items-center pb-20 pt-12 px-36 ">
                 <div>
                      <img src={featured} alt="" />
                 </div>
