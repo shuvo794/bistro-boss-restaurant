@@ -5,9 +5,15 @@ function FetureItems() {
   return (
     <div>
              <SectionTittle
-             heading={"Check it out"}
-             subHeading={"FROM OUR MENU"}
+             heading={"FROM OUR MENU"}
+             subHeading={"Check it out"}
              ></SectionTittle>
+
+             <div>
+                <div>
+                    
+                </div>
+             </div>
     </div>
   )
 }
