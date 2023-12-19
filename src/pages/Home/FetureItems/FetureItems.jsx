@@ -4,7 +4,7 @@ import  './FetureItems.css'
 
 function FetureItems() {
   return (
-    <div className="Feture-items text-white pt-5 ">
+    <div className="Feture-items text-white pt-5 my-20">
              <SectionTittle
              heading={"FROM OUR MENU"}
              subHeading={"Check it out"}
