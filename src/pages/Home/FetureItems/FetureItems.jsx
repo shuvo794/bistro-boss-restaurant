@@ -4,8 +4,9 @@ import  './FetureItems.css'
 
 function FetureItems() {
   return (
-    <div className="Feture-items text-white pt-5 my-20">
-             <SectionTittle
+    <div className="Feture-items bg-fixed text-white pt-5 my-20">
+        <div className="bg-slate-400 bg-opacity-50">
+        <SectionTittle
              heading={"FROM OUR MENU"}
              subHeading={"Check it out"}
             
@@ -19,9 +20,11 @@ function FetureItems() {
                     <p>Dec 20, 2023</p>
                     <p>WHERE CAN I GET SOME?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate facere, deserunt dolores maiores quod nobis quas quasi. Eaque repellat recusandae ad laudantium tempore consequatur consequuntur omnis ullam maxime tenetur.</p>
-                    <button className="btn btn-outline mt-4">Read More</button>
+                    <button className="btn btn-outline border-0 border-h border-b-4 mt-4">Read More</button>
                 </div>
              </div>
+        </div>
+             
     </div>
   )
 }
