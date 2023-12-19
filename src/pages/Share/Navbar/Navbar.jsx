@@ -3,8 +3,13 @@ import React from 'react'
 function Navbar() {
 
     const navoption=<>
-    <li><a>Item 1</a></li>
-      <li>
+    <li><a>Home</a></li>
+    <li><a>CONTACT Us</a></li>
+    <li><a>DASHBOARD</a></li>
+    <li><a>Our Menu</a></li>
+    <li><a>Our Shop</a></li>
+    </>
+      {/* <li>
         <details>
           <summary>Parent</summary>
           <ul className="p-2">
@@ -14,7 +19,7 @@ function Navbar() {
         </details>
       </li>
       <li><a>Item 3</a></li>
-    </>
+    </> */}
 
   return (
     <>

@@ -11,10 +11,22 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+import { useEffect, useState } from 'react';
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css'
+
 
 function Reviwe() {
+  const [reviwes,setReviwe]=useState([])
+
+  useEffect(()=>{
+    fetch('Reviwe.json')
+    .then(res=>res.json())
+    .then(data=>setReviwe(data))
+  },[])
+
   return (
-    <div>
+    <section className='my-24'>
         <SectionTittle
         subHeading={"What Our Clients Say"}
         heading={"TESTIMONIALS"}
@@ -22,17 +34,25 @@ function Reviwe() {
        </SectionTittle>
 
        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        
+       {
+        reviwes.map(reviwe=><SwiperSlide
+        key={reviwe._id}
+        >
+         <div className= 'flex flex-col items-center m-16'>
+            <Rating
+                style={{ maxWidth: 180 }}
+                     value={reviwe.rating}
+                   readOnly
+                    />
+          <p className='py-8'>{reviwe.details}</p>
+           <p className='text-orange-500 text-2xl'>{reviwe.name}</p>
+         </div>
+           
+        </SwiperSlide>)
+       }
       </Swiper>
-    </div>
+    </section>
   )
 }
 

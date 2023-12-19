@@ -27,7 +27,15 @@ function PopulerMenu() {
             item={item}
             
             ></MenuItems>)
+            
+
         }
+
+
+       </div>
+       <br />
+       <div className='text-center'>
+       <button className="btn  btn-outline border-0 border-h border-b-4 mt-4">View Full  Menu</button>
        </div>
     </section>
   )

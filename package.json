@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@smastrom/react-rating": "^1.4.0",
     "daisyui": "^4.4.20",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
