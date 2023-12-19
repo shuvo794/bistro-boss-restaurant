@@ -1,5 +1,6 @@
 import Banner from "../Banner/Banner"
 import BistroSection from "../BistroSection/BistroSection"
+import CallUs from "../CallUs/CallUs"
 import Catagory from "../Catagory/Catagory"
 import FetureItems from "../FetureItems/FetureItems"
 import PopulerMenu from "../PopulerMenu/PopulerMenu"
@@ -13,6 +14,7 @@ function Home() {
       <Catagory></Catagory>
       <BistroSection></BistroSection>
       <PopulerMenu></PopulerMenu>
+      <CallUs></CallUs>
       <FetureItems></FetureItems>
       <Reviwe></Reviwe>
     </div>

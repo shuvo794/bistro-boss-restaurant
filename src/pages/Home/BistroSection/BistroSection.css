@@ -1,0 +1,14 @@
+.bistro-boss{
+    background-image: url('../../../assets/home/chef-service.jpg');
+    height: 572px;
+}
+.box-bg{
+    background-color: rgb(233, 243, 253);
+    width: 1096px;
+    height: 334px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 80px;
+
+}
