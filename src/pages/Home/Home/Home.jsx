@@ -3,6 +3,7 @@ import BistroSection from "../BistroSection/BistroSection"
 import Catagory from "../Catagory/Catagory"
 import FetureItems from "../FetureItems/FetureItems"
 import PopulerMenu from "../PopulerMenu/PopulerMenu"
+import Reviwe from "../Reviwe/Reviwe"
 
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <BistroSection></BistroSection>
       <PopulerMenu></PopulerMenu>
       <FetureItems></FetureItems>
+      <Reviwe></Reviwe>
     </div>
   )
 }
