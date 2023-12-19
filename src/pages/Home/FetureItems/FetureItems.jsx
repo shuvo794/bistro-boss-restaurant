@@ -1,5 +1,5 @@
 import SectionTittle from "../../../Components/SectionTittle/SectionTittle"
-
+import featured from '../../../assets/home/featured.jpg'
 
 function FetureItems() {
   return (
@@ -11,7 +11,7 @@ function FetureItems() {
 
              <div>
                 <div>
-                    
+                     <img src={featured} alt="" />
                 </div>
              </div>
     </div>
