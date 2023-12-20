@@ -12,7 +12,7 @@ function Chef() {
 
         </SectionTittle>
 
-        <div className='grid md:grid-cols-3 gap-5"'>
+        <div className='grid md:grid-cols-3 gap-5 p-4'>
         <div className="card w-96 glass">
   <img style={{width:'424px',height:'300px'}} src={slide1} alt="car!"/>
   <div className="card-body ">
