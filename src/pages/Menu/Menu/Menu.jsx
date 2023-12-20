@@ -4,6 +4,7 @@ import menuCover from '../../../assets/menu/banner3.jpg'
 import menuCover1 from '../../../assets/menu/dessert-bg.jpeg'
 import menuCover2 from '../../../assets/menu/pizza-bg.jpg'
 import menuCover3 from '../../../assets/menu/salad-bg.jpg'
+import menuCover4 from '../../../assets/menu/soup-bg.jpg'
 import useMenu from '../../Hooks/useMenu';
 import SectionTittle from '../../../Components/SectionTittle/SectionTittle';
 import MenuCatagory from '../MenuCatagory/MenuCatagory';
@@ -56,6 +57,14 @@ function Menu() {
       items={salad}
       title="salad"
       img={menuCover3}
+      ></MenuCatagory>
+
+      {/* SOUPS section */}
+
+      <MenuCatagory
+      items={soup}
+      title="Soup"
+      img={menuCover4}
       ></MenuCatagory>
       
 
