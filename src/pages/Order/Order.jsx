@@ -15,7 +15,7 @@ function Order() {
     const pizza =menu.filter(item=>item.category === 'pizza');
     const salad =menu.filter(item=>item.category === 'salad');
     const soup =menu.filter(item=>item.category === 'soup');
-    const offered =menu.filter(item=>item.category === 'offered');
+    const drinks=menu.filter(item=>item.category === 'drinks');
   return (
     <div>
         <Helmet>
@@ -29,11 +29,23 @@ function Order() {
     <Tab>Pizza</Tab>
     <Tab>Soups</Tab>
     <Tab>Desserts</Tab>
+    <Tab>Drinks</Tab>
   </TabList>
   <TabPanel>
    <OrderTab items={salad}></OrderTab>
   </TabPanel>
-  <TabPanel></TabPanel>
+  <TabPanel>
+   <OrderTab items={pizza}></OrderTab>
+  </TabPanel>
+  <TabPanel>
+   <OrderTab items={soup}></OrderTab>
+  </TabPanel>
+  <TabPanel>
+   <OrderTab items={dessert}></OrderTab>
+  </TabPanel>
+  <TabPanel>
+   <OrderTab items={drinks}></OrderTab>
+  </TabPanel>
 </Tabs>
 
 
