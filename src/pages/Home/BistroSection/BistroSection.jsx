@@ -1,16 +1,26 @@
+import chefService from '../../../assets/home/chef-service.jpg'
+import { Parallax } from 'react-parallax';
 
-
-import './BistroSection.css'
 function BistroSection() {
   return (
-    <div className="bistro-boss max-w-screen-xl p-24">
-  
-  
-  <div className='box-bg max-w-screen-xl'>
-    <h3 className='text-center mb-2'>Bistro Boss</h3>
-    <p className='text-center mb-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, libero accusamus laborum deserunt ratione dolor officiis praesentium! Deserunt magni aperiam dolor eius dolore at, nihil iusto ducimus incidunt quibusdam nemo.</p>
+    <Parallax
+        blur={{ min: -80, max: 90 }}
+        bgImage={chefService}
+        bgImageAlt="the Menu"
+        strength={-200}
+    >
+        <div className="hero h-[700px]" >
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-md">
+      <h1 className="mb-5 text-5xl font-bold">Bistro Boss</h1>
+      <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+     
+    </div>
   </div>
 </div>
+    </Parallax>
+   
   )
 }
 
