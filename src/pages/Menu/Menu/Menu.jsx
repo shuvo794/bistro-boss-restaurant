@@ -46,7 +46,7 @@ function Menu() {
 
       <MenuCatagory
       items={pizza}
-      title="Pizza"
+      title="pizza"
       img={menuCover2}
 
       ></MenuCatagory>
@@ -63,7 +63,7 @@ function Menu() {
 
       <MenuCatagory
       items={soup}
-      title="Soup"
+      title="soup"
       img={menuCover4}
       ></MenuCatagory>
       
