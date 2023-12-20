@@ -18,9 +18,9 @@ function Home() {
       </Helmet>
       <Banner></Banner>
       <Catagory></Catagory>
-      <BistroSection></BistroSection>
+      {/* <BistroSection></BistroSection> */}
       <PopulerMenu></PopulerMenu>
-      <CallUs></CallUs>
+      {/* <CallUs></CallUs> */}
       <Chef></Chef>
       <FetureItems></FetureItems>
       <Reviwe></Reviwe>
