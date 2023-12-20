@@ -4,9 +4,9 @@ import Cover from '../../Share/Cover/Cover'
 
 function MenuCatagory({items,title,img}) {
   return (
-  <div className='pt-8 pb-10'> 
+  <div className='pt-8 '> 
     {title && <Cover img={img} title={title}></Cover>}
-      <div className="grid md:grid-cols-2 gap-10 mt-16">
+      <div className="grid md:grid-cols-2 gap-10 my-16">
         
         {
             items.map(item=> <MenuItems

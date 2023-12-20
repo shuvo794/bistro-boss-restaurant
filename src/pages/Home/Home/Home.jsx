@@ -20,7 +20,7 @@ function Home() {
       <Catagory></Catagory>
       <BistroSection></BistroSection> 
       <PopulerMenu></PopulerMenu>
-      {/* <CallUs></CallUs> */}
+      <CallUs></CallUs>
       <Chef></Chef>
       <FetureItems></FetureItems>
       <Reviwe></Reviwe>

@@ -1,12 +1,15 @@
 import React from 'react'
-import'./CallUs.css'
+
 function CallUs() {
   return (
-    <div className='bgCol mt-20 p-20'>
-
-        <h3 className='text-center text-6xl text-white'>Call Us : 01876864289</h3>
-    
+    <div className="hero min-h-[250px] bg-black text-white">
+    <div className="hero-content text-center">
+      <div className="max-w-md">
+        <h1 className="text-3xl font-bold">Call Us: 01876864289</h1>
+       
+      </div>
     </div>
+  </div>
     
   )
 }
