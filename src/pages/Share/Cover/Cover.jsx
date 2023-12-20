@@ -5,7 +5,7 @@ function Cover({img,title}) {
     <Parallax
         blur={{ min: -80, max: 90 }}
         bgImage={img}
-        bgImageAlt="the dog"
+        bgImageAlt="the Menu"
         strength={-200}
     >
         <div className="hero h-[700px]" >
