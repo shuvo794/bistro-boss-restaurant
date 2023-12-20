@@ -8,7 +8,7 @@ function Navbar() {
     <li><Link>CONTACT Us</Link></li>
     <li><Link>DASHBOARD</Link></li>
     <li><Link to="./menu">Our Menu</Link></li>
-    <li><Link>Our Shop</Link></li>
+    <li><Link to="./order">Our Shop</Link></li>
     </>
       {/* <li>
         <details>
