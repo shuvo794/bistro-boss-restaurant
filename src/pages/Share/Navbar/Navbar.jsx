@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 
     const navoption=<>
-    <li><a>Home</a></li>
-    <li><a>CONTACT Us</a></li>
-    <li><a>DASHBOARD</a></li>
-    <li><a>Our Menu</a></li>
-    <li><a>Our Shop</a></li>
+    <li><Link>Home</Link></li>
+    <li><Link>CONTACT Us</Link></li>
+    <li><Link>DASHBOARD</Link></li>
+    <li><Link to="./menu">Our Menu</Link></li>
+    <li><Link>Our Shop</Link></li>
     </>
       {/* <li>
         <details>
