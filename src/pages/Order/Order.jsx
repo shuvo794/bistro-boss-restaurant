@@ -3,8 +3,19 @@ import Cover from "../Share/Cover/Cover"
 import shop from '../../assets/shop/banner2.jpg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { useState } from "react";
+import useMenu from "../Hooks/useMenu";
+import FoodCard from "../../Components/FoodCard/FoodCard";
+import OrderTab from "./OrderTab/OrderTab";
 
 function Order() {
+    const [tabIndex,setTabIndex]=useState(0);
+    const [menu]=useMenu();
+    const dessert =menu.filter(item=>item.category === 'dessert');
+    const pizza =menu.filter(item=>item.category === 'pizza');
+    const salad =menu.filter(item=>item.category === 'salad');
+    const soup =menu.filter(item=>item.category === 'soup');
+    const offered =menu.filter(item=>item.category === 'offered');
   return (
     <div>
         <Helmet>
@@ -12,12 +23,16 @@ function Order() {
     </Helmet>
     <Cover img={shop}title="OUR SHOP"></Cover>
 
-    <Tabs defaultIndex={1} onSelect={(index) => console.log(index)}>
+    <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
   <TabList>
-    <Tab>Title 1</Tab>
-    <Tab>Title 2</Tab>
+    <Tab>Salad</Tab>
+    <Tab>Pizza</Tab>
+    <Tab>Soups</Tab>
+    <Tab>Desserts</Tab>
   </TabList>
-  <TabPanel></TabPanel>
+  <TabPanel>
+   <OrderTab items={salad}></OrderTab>
+  </TabPanel>
   <TabPanel></TabPanel>
 </Tabs>
 
