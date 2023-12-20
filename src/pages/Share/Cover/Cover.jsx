@@ -1,8 +1,14 @@
-
+import { Parallax } from 'react-parallax';
 
 function Cover({img,title}) {
   return (
-    <div className="hero h-[700px]" style={{backgroundImage: `url("${img}")`}}>
+    <Parallax
+        blur={{ min: -80, max: 90 }}
+        bgImage={img}
+        bgImageAlt="the dog"
+        strength={-200}
+    >
+        <div className="hero h-[700px]" >
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
@@ -12,6 +18,8 @@ function Cover({img,title}) {
     </div>
   </div>
 </div>
+    </Parallax>
+    
   )
 }
 
