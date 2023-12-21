@@ -12,7 +12,8 @@ import { useParams } from "react-router-dom";
 function Order() {
   const categories =["salad","pizza","soup","dessert","drinks"]
   const {category}=useParams();
-    const [tabIndex,setTabIndex]=useState(0);
+  const initialIndex=categories.indexOf(category)
+    const [tabIndex,setTabIndex]=useState(initialIndex);
    
     console.log(category);
     const [menu]=useMenu();
