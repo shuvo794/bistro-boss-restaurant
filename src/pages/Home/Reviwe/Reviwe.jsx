@@ -20,7 +20,7 @@ function Reviwe() {
   const [reviwes,setReviwe]=useState([])
 
   useEffect(()=>{
-    fetch('Reviwe.json')
+    fetch('http://localhost:5000/reviwe')
     .then(res=>res.json())
     .then(data=>setReviwe(data))
   },[])
