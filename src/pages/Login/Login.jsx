@@ -1,9 +1,12 @@
+import { useEffect } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 
 function Login() {
-    
-    
+    useEffect(()=>{
+        loadCaptchaEnginge(6);
+    },[])
+
 
     const hundelLogIn = event =>{
           event.preventDefault();
