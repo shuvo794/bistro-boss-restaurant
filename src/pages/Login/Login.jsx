@@ -1,3 +1,4 @@
+import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 
 function Login() {
@@ -32,6 +33,13 @@ function Login() {
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
             </label>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <LoadCanvasTemplate/>
+            </label>
+            <input type="text" placeholder="type captca" name="captca" className="input input-bordered" required />
+           
           </div>
           <div className="form-control mt-6">
             
