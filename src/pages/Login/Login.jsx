@@ -22,9 +22,7 @@ function Login() {
     const hendelCaptca=()=>{
      const user_captca =captcaRef.current.value;
      if(validateCaptcha(user_captca)){
-
-     }else{
-
+          setDisable(false)
      }
     }
   return (
