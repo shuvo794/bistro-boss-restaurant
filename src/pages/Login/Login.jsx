@@ -3,6 +3,8 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, val
 
 function Login() {
     
+    
+
     const hundelLogIn = event =>{
           event.preventDefault();
           const form = event.target;
@@ -38,7 +40,7 @@ function Login() {
             <label className="label">
               <LoadCanvasTemplate/>
             </label>
-            <input type="text" placeholder="type captca" name="captca" className="input input-bordered" required />
+            <input type="text" placeholder="type captca" name="Captca" className="input input-bordered" required />
            
           </div>
           <div className="form-control mt-6">
