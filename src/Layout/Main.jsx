@@ -11,11 +11,9 @@ function Main() {
   return (
 
     <div>
-      {
-        noHeaderFoter ||  <Navbar></Navbar>
-      }
+      {noHeaderFoter ||  <Navbar></Navbar>}
        <Outlet></Outlet>
-        <Footer></Footer>
+        {noHeaderFoter || <Footer></Footer>}
     </div>
   )
 }
