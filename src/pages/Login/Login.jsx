@@ -1,8 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 
 function Login() {
+
+    const captcaRef=useRef(null);
+
     useEffect(()=>{
         loadCaptchaEnginge(6);
     },[])
@@ -14,6 +17,11 @@ function Login() {
           const email = form.email.value;
           const password=form.password.value;
           console.log(email,password);
+    }
+
+    const hendelCaptca=()=>{
+     const value =captcaRef.current.value;
+     console.log(value);
     }
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -43,8 +51,8 @@ function Login() {
             <label className="label">
               <LoadCanvasTemplate/>
             </label>
-            <input type="text" placeholder="type captca" name="Captca" className="input input-bordered" required />
-           
+            <input ref={captcaRef} type="text" placeholder="type text avobe" name="Captca" className="input input-bordered" required />
+            <button onClick={hendelCaptca}  className="btn btn-outline btn-xs mt-2">Validet</button>
           </div>
           <div className="form-control mt-6">
             
