@@ -36,7 +36,8 @@ useEffect(()=>{
     const appInfo ={
          user,
          loading,
-         createUser
+         createUser,
+         signInUser
     }
 
   return (
