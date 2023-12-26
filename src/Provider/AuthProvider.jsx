@@ -16,6 +16,11 @@ const createUser=(email,passwod)=>{
   return createUserWithEmailAndPassword(auth,email,passwod);
 }
 
+const signInUser=(email,passwod)=>{
+  setLoading(true);
+
+}
+
 useEffect(()=>{
     const unSubcribe=onAuthStateChanged(auth,currentUser=>{
     setUser(currentUser);
