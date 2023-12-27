@@ -29,19 +29,22 @@ function SignUp() {
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="name" name="name" {...register("name")} placeholder="Type your name" className="input input-bordered" required />
+          <input type="name" name="name" {...register("name", { required: true })} placeholder="Type your name" className="input input-bordered"  />
+          {errors.name && <span className="text-red-600">Name field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" {...register("email")} className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" {...register("email",{ required: true })} className="input input-bordered"  />
+          {errors.email && <span className="text-red-600">Email field is required</span>}
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" {...register("password")} className="input input-bordered" required />
+          <input type="password" placeholder="password" name="password" {...register("password",{ required: true })} className="input input-bordered" />
+          {errors.password && <span className="text-red-700">Password field is required</span>}
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
