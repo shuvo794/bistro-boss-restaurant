@@ -23,7 +23,7 @@ const signInUser=(email,passwod)=>{
 }
 
 const logOut =()=>{
-  setLoading(false);
+  setLoading(true);
   return signOut(auth);
 }
 
