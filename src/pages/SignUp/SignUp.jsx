@@ -13,7 +13,7 @@ function SignUp() {
     console.log(data)
   }
 
-  console.log(watch("example"))
+  
    
 
     return (
