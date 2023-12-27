@@ -1,13 +1,9 @@
 import { useForm } from "react-hook-form"
 
-const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm
+
 
 function SignUp() {
+    const {register,handleSubmit,watch,formState: { errors }} = useForm
   return (
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
