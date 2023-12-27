@@ -69,8 +69,9 @@ function Login() {
             
             <input disabled={disable} className="btn btn-primary" type="submit" value="Submit" />
           </div>
+          <p>New here ? <Link to="/signup">Please Create Acount</Link> </p>
         </form>
-        <p>New here ? <Link to="/signup">Please Create Acount</Link> </p>
+        
       </div>
     </div>
   </div>
