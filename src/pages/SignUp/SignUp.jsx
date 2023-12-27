@@ -1,15 +1,25 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 function SignUp() {
   const {
     register,
     handleSubmit,
-    watch,
+    
     formState: { errors },
   } = useForm();
+
+  const { createUser } = useContext(AuthContext);
+
   const onSubmit = (data) => {
     console.log(data);
+    createUser(data.email, data.password)
+      .then(result => {
+        const logUser = result.user;
+        console.log(logUser);
+    })
   };
 
   return (
