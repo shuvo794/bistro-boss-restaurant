@@ -6,7 +6,7 @@ import Navbar from '../pages/Share/Navbar/Navbar'
 
 function Main() {
   const location =useLocation()
-  const noHeaderFoter=location.pathname.includes('login')
+  const noHeaderFoter=location.pathname.includes('login')||location.pathname.includes('signup')
 
   return (
 
