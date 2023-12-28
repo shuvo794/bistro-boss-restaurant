@@ -5,7 +5,7 @@ import {
   validateCaptcha,
 } from "react-simple-captcha";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
 
@@ -13,6 +13,9 @@ function Login() {
   
   const [disable, setDisable] = useState(true);
   const { signInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -43,7 +46,9 @@ function Login() {
       animate__faster
     `
   }
-});
+  
+      });
+       navigate(from, { replace: true });
     });
   };
 
