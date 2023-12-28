@@ -3,16 +3,17 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 function SignUp() {
   const {
     register,
     handleSubmit,
-    
+    reset,
     formState: { errors },
   } = useForm();
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser,userUpdateProfile } = useContext(AuthContext);
 
   const onSubmit = (data) => {
     console.log(data);
@@ -20,6 +21,20 @@ function SignUp() {
       .then(result => {
         const logUser = result.user;
         console.log(logUser);
+        userUpdateProfile(data.name, data.photoUrl)
+          .then(() => {
+            console.log('User profile update');
+            reset();
+            Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your Profile Created Successfully",
+  showConfirmButton: false,
+  timer: 1500
+});
+          })
+          .catch(error => console.log(error));
+        
     })
   };
 
