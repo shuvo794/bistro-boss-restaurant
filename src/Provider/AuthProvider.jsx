@@ -18,7 +18,7 @@ const createUser=(email,passwod)=>{
 
 const signInUser=(email,passwod)=>{
   setLoading(true);
-  return signInWithEmailAndPassword(email,passwod);
+  return signInWithEmailAndPassword(auth,email,passwod);
 
 }
 
