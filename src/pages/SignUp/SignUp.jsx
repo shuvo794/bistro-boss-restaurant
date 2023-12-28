@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const {
@@ -70,16 +71,7 @@ function SignUp() {
                 <span className="text-red-600">Email field is required</span>
               )}
             </div>
-            {/* <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" placeholder="password" name="password" {...register("password",{ required: true })} className="input input-bordered" />
-          {errors.password && <span className="text-red-700">Password field is required</span>}
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div> */}
+            
 
             <div className="form-control">
               <label className="label">
@@ -122,7 +114,10 @@ function SignUp() {
             <div className="form-control mt-6">
               
                 <input className="btn btn-primary" type="submit" value="Sign Up" />
-            </div>
+              </div>
+              <p className="text-red-700">
+              Have a Acount ? <Link to="/login">Please Login</Link>{" "}
+            </p>
           </form>
         </div>
       </div>

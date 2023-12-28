@@ -122,7 +122,7 @@ function Login() {
                 value="LOGIN"
               />
             </div>
-            <p>
+            <p className="text-red-700">
               New here ? <Link to="/signup">Please Create Acount</Link>{" "}
             </p>
           </form>
