@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../../Provider/AuthProvider'
 
 function Navbar() {
+
+  const { user } = useContext(AuthContext);
 
     const navoption=<>
     <li><Link>Home</Link></li>
