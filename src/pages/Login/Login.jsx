@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
 
 function Login() {
-  const captcaRef = useRef(null);
+  
   const [disable, setDisable] = useState(true);
   const { signInUser } = useContext(AuthContext);
 
@@ -28,7 +28,7 @@ function Login() {
       const user = result.user;
       console.log(user);
       Swal.fire({
-  title: "Custom animation with Animate.css",
+  title: "user Log in successfully",
   showClass: {
     popup: `
       animate__animated
@@ -47,8 +47,8 @@ function Login() {
     });
   };
 
-  const hendelCaptca = () => {
-    const user_captca = captcaRef.current.value;
+  const hendelCaptca = (e) => {
+    const user_captca = e.target.value;
     if (validateCaptcha(user_captca)) {
       setDisable(false);
     }
@@ -105,26 +105,21 @@ function Login() {
                 <LoadCanvasTemplate />
               </label>
               <input
-                ref={captcaRef}
+              onBlur={hendelCaptca}
                 type="text"
                 placeholder="type text avobe"
                 name="Captca"
                 className="input input-bordered"
                 required
               />
-              <button
-                onClick={hendelCaptca}
-                className="btn btn-outline btn-xs mt-2"
-              >
-                Validet
-              </button>
+              
             </div>
             <div className="form-control mt-6">
               <input
                 disabled={disable}
                 className="btn btn-primary"
                 type="submit"
-                value="LogIn"
+                value="LOGIN"
               />
             </div>
             <p>
