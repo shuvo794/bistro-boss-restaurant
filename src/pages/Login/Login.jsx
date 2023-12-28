@@ -8,7 +8,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
-import authincation1 from '../../assets/others/authentication1.png';
+import authincation1 from '../../assets/others/authentication2.png';
 function Login() {
   
   const [disable, setDisable] = useState(true);
@@ -124,7 +124,7 @@ function Login() {
             </p>
           </form>
         </div>
-        <div className="md:w-1/2  p-20 ">
+        <div className="md:w-1/2  p-15 ">
          <img src={authincation1} alt="" />
         </div>
         
