@@ -106,7 +106,7 @@ function Login() {
                 disabled={disable}
                 className="btn btn-primary"
                 type="submit"
-                value="Submit"
+                value="LogIn"
               />
             </div>
             <p>
