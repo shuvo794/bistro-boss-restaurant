@@ -55,6 +55,21 @@ function SignUp() {
               {errors.name && (
                 <span className="text-red-600">Name field is required</span>
               )}
+              </div>
+               <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo</span>
+              </label>
+              <input
+                type="photo"
+                
+                {...register("photoUrl", { required: true })}
+                placeholder="place your image Link"
+                className="input input-bordered"
+              />
+              {errors.name && (
+                <span className="text-red-600">PhotoUrl field is required</span>
+              )}
             </div>
             <div className="form-control">
               <label className="label">
