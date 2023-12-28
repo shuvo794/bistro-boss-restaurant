@@ -33,7 +33,7 @@ function AuthProvider({ children }) {
     return signOut(auth);
   };
 
-  const userUpdatePhoto = (name, photo) => {
+  const userUpdateProfile = (name, photo) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -57,7 +57,7 @@ function AuthProvider({ children }) {
     createUser,
     signInUser,
     logOut,
-    userUpdatePhoto,
+    userUpdateProfile,
   };
 
   return (
