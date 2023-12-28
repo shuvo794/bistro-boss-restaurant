@@ -36,8 +36,9 @@ function Navbar() {
 
       {user ? (
         <>
+          <span>{ user?.displayName}</span>
           <button onClick={handelLogOut} className="btn btn-active btn-ghost">
-            Log Out
+            LOGOUT
           </button>
         </>
       ) : (
