@@ -15,8 +15,9 @@ function Navbar() {
       
       
       {
-        user ? <></> :
-          <>
+        user ? <>
+        
+        </> : <>
         <li><Link to="./login">Login</Link></li>
        </>
       }
