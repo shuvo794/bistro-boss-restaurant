@@ -4,7 +4,11 @@ import { AuthContext } from '../../../Provider/AuthProvider'
 
 function Navbar() {
 
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  
+  const handelLogOut = () => {
+    
+  }
 
     const navoption=<>
     <li><Link>Home</Link></li>
@@ -16,7 +20,7 @@ function Navbar() {
       
       {
         user ? <>
-        
+        <button onClick={handelLogOut} className="btn btn-active btn-ghost">Ghost</button>
         </> : <>
         <li><Link to="./login">Login</Link></li>
        </>
