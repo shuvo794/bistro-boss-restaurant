@@ -34,9 +34,18 @@ function Navbar() {
         <Link to="./order/salad">Our Shop</Link>
       </li>
 
+      <li>
+        <Link to="/">
+          <button className="btn">
+            Inbox
+            <div className="badge badge-secondary">+99</div>
+          </button>
+        </Link>
+      </li>
+
       {user ? (
         <>
-          <span>{ user?.displayName}</span>
+          {/* <span>{ user?.displayName}</span> */}
           <button onClick={handelLogOut} className="btn btn-active btn-ghost">
             LOGOUT
           </button>

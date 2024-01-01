@@ -16,21 +16,26 @@ import SectionTittle from '../../../Components/SectionTittle/SectionTittle';
 
 function Catagory() {
   return (
-   <section className='mb-24'>
+    <section className='mb-24'>
+      
     <SectionTittle
     subHeading={"From 11:00am to 10:00pm"}
     heading={"ORDER ONLINE"}
     >
-    </SectionTittle>
-     <Swiper
+      </SectionTittle>
+     
+      <Swiper
+       
     slidesPerView={4}
     spaceBetween={30}
     centeredSlides={true}
     pagination={{
       clickable: true,
+      
     }}
     modules={[Pagination]}
-    className="mySwiper"
+        className="mySwiper"
+        
   >
     <SwiperSlide>
     <img src={catagory2} alt="" />
