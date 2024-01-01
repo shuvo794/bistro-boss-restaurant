@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 function FoodCard({item}) {
 
@@ -10,7 +11,18 @@ function FoodCard({item}) {
     console.log(item);
     if (user) {
       fetch('http://localhost:5000/carts')
-      .then(res=>res.json())
+        .then(res => res.json())
+        .then(data => {
+          if (data.insertedId) {
+          Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your work has been saved",
+  showConfirmButton: false,
+  timer: 1500
+});
+        }
+      })
     }
   }
   
