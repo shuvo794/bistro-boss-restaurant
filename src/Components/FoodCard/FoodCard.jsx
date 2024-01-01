@@ -27,7 +27,6 @@ function FoodCard({ item }) {
     } else {
       Swal.fire({
         title: "Please Login to Order the Food",
-
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -35,7 +34,7 @@ function FoodCard({ item }) {
         confirmButtonText: "Login Now!",
       }).then((result) => {
         if (result.isConfirmed) {
-         navigate('/login')
+          navigate("/login");
         }
       });
     }
