@@ -2,7 +2,8 @@ import React from 'react'
 
 function FoodCard({item}) {
 
-    const {name,image,recipe,price}=item;
+  const { name, image, recipe, price } = item;
+  
   return (
     <div>
         <div className="card w-96 bg-base-100 shadow-xl">
