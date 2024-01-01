@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 function FoodCard({item}) {
 
   const { name, image, recipe, price } = item;
+  const { user } = useContext(AuthContext);
 
   const handelAddTocurt = item => {
-    
+    console.log(item);
+    if (user) {
+      fetch('http://localhost:5000/carts')
+      .then(res=>res.json())
+    }
   }
   
   return (
