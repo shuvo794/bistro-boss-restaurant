@@ -24,6 +24,9 @@ function FoodCard({item}) {
         }
       })
     }
+    else {
+      
+    }
   }
   
   return (
