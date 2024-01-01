@@ -8,9 +8,10 @@ import img5 from '../../../assets/banner/05.png'
 import img6 from '../../../assets/banner/06.png'
 
 
+
 function Banner() {
   return (
-    <Carousel >
+    <Carousel infiniteLoop autoPlay>
                 <div>
                     <img src={img1} />
                    
