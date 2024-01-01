@@ -24,7 +24,7 @@ function FoodCard({ item }) {
         });
     } else {
       Swal.fire({
-        title: "Please Login!",
+        title: "Please Login to Order the Food",
 
         icon: "warning",
         showCancelButton: true,
