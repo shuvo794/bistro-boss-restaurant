@@ -40,7 +40,7 @@ function Navbar() {
         <Link to="/">
           <button className="btn">
             <FaShoppingCart />
-            <div className="badge badge-secondary">+99</div>
+            <div className="badge badge-secondary">+1</div>
           </button>
         </Link>
       </li>
