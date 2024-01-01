@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 function FoodCard({ item }) {
   const { name, image, recipe, price } = item;
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handelAddTocurt = (item) => {
     console.log(item);
@@ -33,11 +35,7 @@ function FoodCard({ item }) {
         confirmButtonText: "Login Now!",
       }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success",
-          });
+         navigate('/login')
         }
       });
     }
