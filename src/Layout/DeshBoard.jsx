@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function DeshBoard() {
   return (
@@ -21,9 +21,12 @@ function DeshBoard() {
           className="drawer-overlay"
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-       
+          <h1 className="text-center text-base">
+            <span className="font-bold">BISTRO BOSS</span> <br />
+            <span>Restaurant</span>
+          </h1>
           <li>
-            <a>Sidebar Item 1</a>
+            <Link></Link>
           </li>
           <li>
             <a>Sidebar Item 2</a>
