@@ -11,6 +11,7 @@ function FoodCard({ item }) {
   const handelAddTocurt = (item) => {
     console.log(item);
     if (user) {
+      const orderItem = { menuId: _id };
       fetch("http://localhost:5000/carts", {
         method: 'POST',
         headers: {
