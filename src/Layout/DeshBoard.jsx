@@ -1,5 +1,10 @@
-import React from 'react'
+
 import { Link, Outlet } from 'react-router-dom';
+import { IoMdHome } from "react-icons/io";
+import { FaCalendarAlt, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import { MdOutlinePreview } from "react-icons/md";
+import { IoBagAddSharp } from "react-icons/io5";
+
 
 function DeshBoard() {
   return (
@@ -25,11 +30,39 @@ function DeshBoard() {
             <span className="font-bold">BISTRO BOSS</span> <br />
             <span>Restaurant</span>
           </h1>
-          <li>
-            <Link></Link>
+          <li className="text-base">
+            <Link to="">
+              <IoMdHome /> User Home
+            </Link>
           </li>
-          <li>
-            <a>Sidebar Item 2</a>
+
+          <li className="text-base">
+            <Link to="">
+              <FaCalendarAlt /> Reservation
+            </Link>
+          </li>
+
+          <li className="text-base">
+            <Link to="">
+              <FaWallet /> Payment History
+            </Link>
+          </li>
+          <li className="text-base">
+            <Link to="">
+              <FaShoppingCart /> My Cart
+            </Link>
+          </li>
+
+          <li className="text-base">
+            <Link to="">
+              <MdOutlinePreview /> Add Review
+            </Link>
+          </li>
+          <li className="text-base">
+            <Link to="">
+              <IoBagAddSharp /> My Booking
+            </Link>
+            <div className="divider"></div>
           </li>
         </ul>
       </div>
