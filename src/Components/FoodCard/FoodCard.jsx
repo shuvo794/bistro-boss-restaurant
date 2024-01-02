@@ -4,20 +4,21 @@ import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function FoodCard({ item }) {
-  const { name, image, recipe, price } = item;
+  const { name, image, recipe, price,_id } = item;
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const handelAddTocurt = (item) => {
     console.log(item);
-    if (user) {
-      const orderItem = { menuId: _id };
+    if (user && user.email) {
+      const cartItem = { menuId: _id,name, image, price,email:user.email };
       fetch("http://localhost:5000/carts", {
         method: 'POST',
         headers: {
-          'content-type':'applicatio/json'
+          'content-type':'application/json'
         },
-        body:JSON.stringify()
+        
+        body:JSON.stringify(cartItem)
       })
         .then((res) => res.json())
         .then((data) => {
