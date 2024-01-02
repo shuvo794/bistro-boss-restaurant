@@ -1,9 +1,11 @@
 
 import { Link, Outlet } from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
-import { FaCalendarAlt, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import { FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
 import { MdOutlinePreview } from "react-icons/md";
-import { IoBagAddSharp } from "react-icons/io5";
+import { IoBagAddSharp, IoMenu } from "react-icons/io5";
+import { CiShop } from "react-icons/ci";
+
 
 
 function DeshBoard() {
@@ -30,6 +32,7 @@ function DeshBoard() {
             <span className="font-bold">BISTRO BOSS</span> <br />
             <span>Restaurant</span>
           </h1>
+          <br/>
           <li className="text-base">
             <Link to="">
               <IoMdHome /> User Home
@@ -62,7 +65,30 @@ function DeshBoard() {
             <Link to="">
               <IoBagAddSharp /> My Booking
             </Link>
-            <div className="divider"></div>
+          </li>
+          <div className="divider"></div>
+
+          <li className="text-base">
+            <Link to="">
+              <IoMdHome /> Home
+            </Link>
+          </li>
+
+          <li className="text-base">
+            <Link to="./menu">
+              <IoMenu /> Menu
+            </Link>
+          </li>
+          <li className="text-base">
+            <Link to="./order/salad">
+              <CiShop /> Our Shop
+            </Link>
+          </li>
+
+          <li className="text-base">
+            <Link to="./order/salad">
+              <FaEnvelope /> Contact
+            </Link>
           </li>
         </ul>
       </div>
