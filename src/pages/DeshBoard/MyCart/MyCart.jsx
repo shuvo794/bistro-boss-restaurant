@@ -8,7 +8,7 @@ function MyCart() {
   const [cart] = usecarts();
   const total = cart.reduce((sum, item) => item.price + sum, 0);
   return (
-    <div>
+    <div className="w-full">
       <Helmet>
         <title>Bistro Boss/myCart</title>
       </Helmet>
