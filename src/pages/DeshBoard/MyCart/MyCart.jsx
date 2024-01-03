@@ -1,11 +1,11 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async';
-import usecarts from '../../Hooks/usecarts';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import usecarts from "../../Hooks/usecarts";
 // import SectionTittle from '../../../Components/SectionTittle/SectionTittle';
 
 function MyCart() {
-  const [cart] = usecarts()
-  const total =cart.reduce((sum,item)=>item.price+sum,0)
+  const [cart] = usecarts();
+  const total = cart.reduce((sum, item) => item.price + sum, 0);
   return (
     <div>
       <Helmet>
@@ -180,12 +180,10 @@ function MyCart() {
               </th>
             </tr>
           </tbody>
-          {/* foot */}
-          
         </table>
       </div>
     </div>
   );
 }
 
-export default MyCart
+export default MyCart;
