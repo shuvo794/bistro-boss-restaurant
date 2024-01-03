@@ -72,18 +72,18 @@ function DeshBoard() {
           <div className="divider"></div>
 
           <li className="text-base">
-            <NavLink to="/deshboard/home">
+            <NavLink to="/">
               <IoMdHome /> Home
             </NavLink>
           </li>
 
           <li className="text-base">
-            <NavLink to="./menu">
+            <NavLink to="/menu">
               <IoMenu /> Menu
             </NavLink>
           </li>
           <li className="text-base">
-            <NavLink to="./order/salad">
+            <NavLink to="/order/salad">
               <CiShop /> Our Shop
             </NavLink>
           </li>
