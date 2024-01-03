@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import usecarts from "../../Hooks/usecarts";
+import { FaTrashAlt } from "react-icons/fa";
 // import SectionTittle from '../../../Components/SectionTittle/SectionTittle';
 
 function MyCart() {
@@ -57,9 +58,9 @@ function MyCart() {
                   {row.name}
                   
                 </td>
-                <td>$ {row.price}</td>
+                <td className="text-end">$ {row.price}</td>
                 <td>
-                  <button className="btn btn-ghost btn-xs">details</button>
+                  <button className="btn btn-ghost bg-red-600 text-white btn-lg"><FaTrashAlt/></button>
                 </td>
               </tr>
             ))}
