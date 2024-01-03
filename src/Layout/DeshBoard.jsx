@@ -1,5 +1,5 @@
 
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
 import { FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
 import { MdOutlinePreview } from "react-icons/md";
@@ -34,61 +34,61 @@ function DeshBoard() {
           </h1>
           <br />
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <IoMdHome /> User Home
-            </Link>
+            </NavLink>
           </li>
 
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <FaCalendarAlt /> Reservation
-            </Link>
+            </NavLink>
           </li>
 
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <FaWallet /> Payment History
-            </Link>
+            </NavLink>
           </li>
           <li className="text-base">
-            <Link to="/deshboard/mycart">
+            <NavLink to="/deshboard/mycart">
               <FaShoppingCart /> My Cart
-            </Link>
+            </NavLink>
           </li>
 
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <MdOutlinePreview /> Add Review
-            </Link>
+            </NavLink>
           </li>
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <IoBagAddSharp /> My Booking
-            </Link>
+            </NavLink>
           </li>
           <div className="divider"></div>
 
           <li className="text-base">
-            <Link to="">
+            <NavLink to="">
               <IoMdHome /> Home
-            </Link>
+            </NavLink>
           </li>
 
           <li className="text-base">
-            <Link to="./menu">
+            <NavLink to="./menu">
               <IoMenu /> Menu
-            </Link>
+            </NavLink>
           </li>
           <li className="text-base">
-            <Link to="./order/salad">
+            <NavLink to="./order/salad">
               <CiShop /> Our Shop
-            </Link>
+            </NavLink>
           </li>
 
           <li className="text-base">
-            <Link to="./order/salad">
+            <NavLink to="./order/salad">
               <FaEnvelope /> Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
