@@ -1,4 +1,3 @@
-
 import { NavLink, Outlet } from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
 import { FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
@@ -10,6 +9,7 @@ import { CiShop } from "react-icons/ci";
 
 function DeshBoard() {
   return (
+    
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
@@ -34,19 +34,19 @@ function DeshBoard() {
           </h1>
           <br />
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/home">
               <IoMdHome /> User Home
             </NavLink>
           </li>
 
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/reservation">
               <FaCalendarAlt /> Reservation
             </NavLink>
           </li>
 
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/history">
               <FaWallet /> Payment History
             </NavLink>
           </li>
@@ -57,19 +57,19 @@ function DeshBoard() {
           </li>
 
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/addReview">
               <MdOutlinePreview /> Add Review
             </NavLink>
           </li>
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/myBoking">
               <IoBagAddSharp /> My Booking
             </NavLink>
           </li>
           <div className="divider"></div>
 
           <li className="text-base">
-            <NavLink to="">
+            <NavLink to="/deshboard/home">
               <IoMdHome /> Home
             </NavLink>
           </li>
