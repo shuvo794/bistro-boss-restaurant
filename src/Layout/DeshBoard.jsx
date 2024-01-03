@@ -32,7 +32,7 @@ function DeshBoard() {
             <span className="font-bold">BISTRO BOSS</span> <br />
             <span>Restaurant</span>
           </h1>
-          <br/>
+          <br />
           <li className="text-base">
             <Link to="">
               <IoMdHome /> User Home
@@ -51,7 +51,7 @@ function DeshBoard() {
             </Link>
           </li>
           <li className="text-base">
-            <Link to="">
+            <Link to="/deshboard/mycart">
               <FaShoppingCart /> My Cart
             </Link>
           </li>

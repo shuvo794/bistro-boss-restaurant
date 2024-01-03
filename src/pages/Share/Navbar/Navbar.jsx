@@ -39,7 +39,7 @@ function Navbar() {
       </li>
 
       <li>
-        <Link to="/deshboard/mycart">
+        <Link to="/deshboard">
           <button className="btn">
             <FaShoppingCart />
             <div className="badge badge-secondary">+{cart?.length || 0}</div>
