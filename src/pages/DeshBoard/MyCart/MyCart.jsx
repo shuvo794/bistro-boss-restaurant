@@ -16,7 +16,7 @@ function MyCart() {
         subHeading={"My Cart"}
         heading={"WANNA ADD MORE?"}
       ></SectionTittle> */}
-      <div className="uppercase font-semibold	flex justify-evenly	 items-center">
+      <div className="uppercase font-semibold h-[60px]	flex justify-evenly	 items-center">
         <h2 className="text-3xl">Total Orders: {cart.length}</h2>
         <h2 className="text-3xl">Total Price: ${total}</h2>
         <button className="btn btn-warning btn-sm text-white">PAY</button>
