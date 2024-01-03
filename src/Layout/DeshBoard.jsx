@@ -4,10 +4,12 @@ import { FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons
 import { MdOutlinePreview } from "react-icons/md";
 import { IoBagAddSharp, IoMenu } from "react-icons/io5";
 import { CiShop } from "react-icons/ci";
+import usecarts from '../pages/Hooks/usecarts';
 
 
 
 function DeshBoard() {
+  const [cart] = usecarts();
   return (
     
     <div className="drawer lg:drawer-open">
@@ -53,6 +55,7 @@ function DeshBoard() {
           <li className="text-base">
             <NavLink to="/deshboard/mycart">
               <FaShoppingCart /> My Cart
+              <span className="badge badge-secondary">+{cart?.length || 0}</span>
             </NavLink>
           </li>
 
