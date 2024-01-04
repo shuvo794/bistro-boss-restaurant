@@ -10,8 +10,8 @@ import usecarts from '../pages/Hooks/usecarts';
 
 function DeshBoard() {
   const [cart] = usecarts();
+  const isAdmin = true;
   return (
-    
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center">
@@ -35,40 +35,87 @@ function DeshBoard() {
             <span>Restaurant</span>
           </h1>
           <br />
-          <li className="text-base">
-            <NavLink to="/deshboard/home">
-              <IoMdHome /> User Home
-            </NavLink>
-          </li>
 
-          <li className="text-base">
-            <NavLink to="/deshboard/reservation">
-              <FaCalendarAlt /> Reservation
-            </NavLink>
-          </li>
+          {isAdmin ? (
+            <>
+              <li className="text-base">
+                <NavLink to="/deshboard/home">
+                  <IoMdHome /> User Admin
+                </NavLink>
+              </li>
 
-          <li className="text-base">
-            <NavLink to="/deshboard/history">
-              <FaWallet /> Payment History
-            </NavLink>
-          </li>
-          <li className="text-base">
-            <NavLink to="/deshboard/mycart">
-              <FaShoppingCart /> My Cart
-              <span className="badge badge-secondary">+{cart?.length || 0}</span>
-            </NavLink>
-          </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/reservation">
+                  <FaCalendarAlt /> AddItems
+                </NavLink>
+              </li>
 
-          <li className="text-base">
-            <NavLink to="/deshboard/addReview">
-              <MdOutlinePreview /> Add Review
-            </NavLink>
-          </li>
-          <li className="text-base">
-            <NavLink to="/deshboard/myBoking">
-              <IoBagAddSharp /> My Booking
-            </NavLink>
-          </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/history">
+                  <FaWallet /> manage items
+                </NavLink>
+              </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/mycart">
+                  <FaShoppingCart /> All User
+                  <span className="badge badge-secondary">
+                    +{cart?.length || 0}
+                  </span>
+                </NavLink>
+              </li>
+
+              <li className="text-base">
+                <NavLink to="/deshboard/addReview">
+                  <MdOutlinePreview /> Add Review
+                </NavLink>
+              </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/myBoking">
+                  <IoBagAddSharp /> My Booking
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="text-base">
+                <NavLink to="/deshboard/home">
+                  <IoMdHome /> User Home
+                </NavLink>
+              </li>
+
+              <li className="text-base">
+                <NavLink to="/deshboard/reservation">
+                  <FaCalendarAlt /> Reservation
+                </NavLink>
+              </li>
+
+              <li className="text-base">
+                <NavLink to="/deshboard/history">
+                  <FaWallet /> Payment History
+                </NavLink>
+              </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/mycart">
+                  <FaShoppingCart /> My Cart
+                  <span className="badge badge-secondary">
+                    +{cart?.length || 0}
+                  </span>
+                </NavLink>
+              </li>
+
+              <li className="text-base">
+                <NavLink to="/deshboard/addReview">
+                  <MdOutlinePreview /> Add Review
+                </NavLink>
+              </li>
+              <li className="text-base">
+                <NavLink to="/deshboard/myBoking">
+                  <IoBagAddSharp /> My Booking
+                </NavLink>
+              </li>
+            </>
+          )}
+
           <div className="divider"></div>
 
           <li className="text-base">
