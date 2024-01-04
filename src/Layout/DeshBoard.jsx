@@ -67,11 +67,11 @@ function DeshBoard() {
               </li>
 
               <li className="text-base">
-                <NavLink to="/deshboard/mycart">
+                <NavLink to="/deshboard/allusers">
                   <FaUsersLine /> All User
-                  <span className="badge badge-secondary">
+                  {/* <span className="badge badge-secondary">
                     +{cart?.length || 0}
-                  </span>
+                  </span> */}
                 </NavLink>
               </li>
             </>
