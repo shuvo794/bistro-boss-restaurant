@@ -9,7 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
 import authincation1 from '../../assets/others/authentication2.png';
-import SocalSite from "../Share/SocalSite/SocalSite";
+import SocalSite from "../../Components/SocalSite/SocalSite";
 function Login() {
   
   const [disable, setDisable] = useState(true);
