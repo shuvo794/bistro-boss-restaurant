@@ -13,6 +13,7 @@ function SocalSite() {
       .then(result => {
         const logInUser = result.user;
         console.log(logInUser);
+        navigate(from, { replace: true });
     })
   }
   return (
