@@ -1,7 +1,7 @@
 
 
 import { useQuery } from "@tanstack/react-query";
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 
 
 function AllUsers() {
@@ -40,7 +40,18 @@ function AllUsers() {
                 <th>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>Blue</td>
+                <td>
+                  {user.role === "admin" ? (
+                    "admin"
+                  ) : (
+                    <button
+                      onClick={() => handelClick(user)}
+                      className="btn btn-ghost bg-orange-600 text-white "
+                    >
+                      <FaUserShield />
+                    </button>
+                  )}
+                </td>
                 <td>
                   <button
                     onClick={() => handelClick(user)}
