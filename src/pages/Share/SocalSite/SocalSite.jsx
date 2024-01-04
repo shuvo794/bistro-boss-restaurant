@@ -2,7 +2,7 @@ import React from 'react'
 
 function SocalSite() {
   return (
-    <div>
+    <div className='w-full my-4 text-center'>
       <div className="divider"></div>
       <button className="btn btn-circle btn-outline">
         <svg
