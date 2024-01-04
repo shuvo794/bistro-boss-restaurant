@@ -17,10 +17,12 @@ function SignUp() {
   const { createUser, userUpdateProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    console.log(data);
+   
+   
     createUser(data.email, data.password).then((result) => {
       const logUser = result.user;
       console.log(logUser);
+      
       userUpdateProfile(data.name, data.photoUrl)
         .then(() => {
           console.log("User profile update");
