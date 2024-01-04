@@ -13,6 +13,11 @@ function AllUsers() {
        },
     });
   
+  const handelMakeAdmin = id => {
+    
+  }
+  
+  
   const handelClick = user => {
     
   }
@@ -45,7 +50,7 @@ function AllUsers() {
                     "admin"
                   ) : (
                     <button
-                      onClick={() => handelClick(user)}
+                      onClick={() => handelMakeAdmin(user._id)}
                       className="btn btn-ghost bg-orange-600 text-white "
                     >
                       <FaUserShield />
