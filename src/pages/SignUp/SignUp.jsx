@@ -5,6 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import authincation2 from '../../assets/others/authentication2.png';
+import SocalSite from "../../Components/SocalSite/SocalSite";
 
 function SignUp() {
   const {
@@ -160,6 +161,7 @@ function SignUp() {
                 Have a Acount ? <Link to="/login">Please Login</Link>{" "}
               </p>
             </form>
+            <SocalSite></SocalSite>
           </div>
 
           <div className="md:w-1/2  p-15 ">
