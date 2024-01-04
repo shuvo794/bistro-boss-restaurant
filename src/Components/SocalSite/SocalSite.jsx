@@ -13,7 +13,30 @@ function SocalSite() {
       .then(result => {
         const logInUser = result.user;
         console.log(logInUser);
-        navigate(from, { replace: true });
+
+const saveUser = {
+  name: logInUser.displayName,
+  email: logInUser.email,
+  // password: data.password,
+};
+fetch("http://localhost:5000/users", {
+  method: "POST",
+  headers: {
+    "content-type": "application/json",
+  },
+  body: JSON.stringify(saveUser),
+})
+  .then((res) => res.json())
+  .then((data) => {
+    if (data.insertedId) {
+    navigate(from, { replace: true });
+    }
+  });
+
+
+
+
+       
     })
   }
   return (
