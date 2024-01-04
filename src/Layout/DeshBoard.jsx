@@ -1,10 +1,14 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { IoMdHome } from "react-icons/io";
-import { FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import { FaBook, FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
 import { MdOutlinePreview } from "react-icons/md";
 import { IoBagAddSharp, IoMenu } from "react-icons/io5";
 import { CiShop } from "react-icons/ci";
 import usecarts from '../pages/Hooks/usecarts';
+import { ImSpoonKnife } from "react-icons/im";
+import { RiMenuAddFill } from "react-icons/ri";
+import { FaUsersLine } from "react-icons/fa6";
+
 
 
 
@@ -46,32 +50,28 @@ function DeshBoard() {
 
               <li className="text-base">
                 <NavLink to="/deshboard/reservation">
-                  <FaCalendarAlt /> AddItems
+                  <ImSpoonKnife /> AddItems
                 </NavLink>
               </li>
 
               <li className="text-base">
                 <NavLink to="/deshboard/history">
-                  <FaWallet /> manage items
-                </NavLink>
-              </li>
-              <li className="text-base">
-                <NavLink to="/deshboard/mycart">
-                  <FaShoppingCart /> All User
-                  <span className="badge badge-secondary">
-                    +{cart?.length || 0}
-                  </span>
+                  <RiMenuAddFill /> Manage Items
                 </NavLink>
               </li>
 
               <li className="text-base">
                 <NavLink to="/deshboard/addReview">
-                  <MdOutlinePreview /> Add Review
+                  <FaBook /> Manage Bookings
                 </NavLink>
               </li>
+
               <li className="text-base">
-                <NavLink to="/deshboard/myBoking">
-                  <IoBagAddSharp /> My Booking
+                <NavLink to="/deshboard/mycart">
+                  <FaUsersLine /> All User
+                  <span className="badge badge-secondary">
+                    +{cart?.length || 0}
+                  </span>
                 </NavLink>
               </li>
             </>
