@@ -18,7 +18,7 @@ function AllUsers() {
   }
   
   
-  const handelClick = user => {
+  const handelDelete = user => {
     
   }
     
@@ -59,7 +59,7 @@ function AllUsers() {
                 </td>
                 <td>
                   <button
-                    onClick={() => handelClick(user)}
+                    onClick={() => handelDelete(user)}
                     className="btn btn-ghost bg-red-600 text-white "
                   >
                     <FaTrashAlt />
