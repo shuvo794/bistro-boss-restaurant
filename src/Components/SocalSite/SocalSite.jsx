@@ -5,7 +5,11 @@ import { AuthContext } from "../../Provider/AuthProvider";
 function SocalSite() {
   const { googleSignInUser } = useContext(AuthContext);
   const handelGoogle = () => {
-    googleSignInUser();
+    googleSignInUser()
+      .then(result => {
+        const logInUser = result.user;
+        console.log(logInUser);
+    })
   }
   return (
     <div className="w-full my-4 text-center">
