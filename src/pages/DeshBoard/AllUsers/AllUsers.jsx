@@ -2,6 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 function AllUsers() {
@@ -13,13 +14,55 @@ function AllUsers() {
        },
     });
   
-  const handelMakeAdmin = id => {
-    
+  const handelMakeAdmin = user => {
+    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+      
+      method:'PATCH'
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if (data.modifiedCount) {
+          refetch();
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `${user.name} is an Admin Now!`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+    })
   }
   
   
   const handelDelete = user => {
-    
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              refetch();
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+          });
+      }
+    });
   }
     
   return (
@@ -50,7 +93,7 @@ function AllUsers() {
                     "admin"
                   ) : (
                     <button
-                      onClick={() => handelMakeAdmin(user._id)}
+                      onClick={() => handelMakeAdmin(user)}
                       className="btn btn-ghost bg-orange-600 text-white "
                     >
                       <FaUserShield />

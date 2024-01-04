@@ -47,20 +47,7 @@ function Navbar() {
         </Link>
       </li>
 
-      {user ? (
-        <>
-          {/* <span>{ user?.displayName}</span> */}
-          <button onClick={handelLogOut} className="btn btn-active btn-ghost">
-            LOGOUT
-          </button>
-        </>
-      ) : (
-        <>
-          <li>
-            <Link to="./login">Login</Link>
-          </li>
-        </>
-      )}
+      
     </>
   );
 
@@ -98,7 +85,23 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1">{navoption}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get start</a>
+          {user ? (
+            <>
+              {/* <span>{ user?.displayName}</span> */}
+              <button
+                onClick={handelLogOut}
+                className="btn btn-active btn-ghost"
+              >
+                LOGOUT
+              </button>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="./login">Login</Link>
+              </li>
+            </>
+          )}
         </div>
       </div>
     </>
