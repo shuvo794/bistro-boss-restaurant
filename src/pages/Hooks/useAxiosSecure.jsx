@@ -1,7 +1,6 @@
 import axios from "axios";
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
+import useAuth from "./useAuth";
 // import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
@@ -9,7 +8,7 @@ const axiosSecure = axios.create({
 });
 const useAxiosSecure = () => {
   const navigate = useNavigate();
-    const { logOut } = useContext(AuthContext);
+  const { logOut } = useAuth();
 
   // request interceptor to add authorization header for every secure call to teh api
   axiosSecure.interceptors.request.use(
