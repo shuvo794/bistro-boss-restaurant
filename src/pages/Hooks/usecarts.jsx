@@ -6,10 +6,10 @@ import useAxiosSecure from "./useAxiosSecure";
 const usecarts = () => {
   const { user } = useContext(AuthContext);
   const token = localStorage.getItem('access-token')
-  const axios = useAxiosSecure();
+  const [axiosSecure] = useAxiosSecure();
   const { refetch, data: cart = [] } = useQuery({
     queryKey: ["carts", user?.email],
-    queryFn: async () => {
+  //   queryFn: async () => {
   //     const response = await fetch(`http://localhost:5000/carts?email=${user?.email}`,
   //       {
   //         headers: {
@@ -20,15 +20,9 @@ const usecarts = () => {
   //     return response.json();
   //   },
   // });
-    queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/carts?email=${user?.email}`,
-        {
-          headers: {
-          authorization:`barrer ${token}`
-        }
-      }
-      );
-      return response.json();
+   queryFn: async () => {
+      const res = await axiosSecure.get(`/carts?email=${user.email}`);
+      return res.data;
     },
   });
   return [cart, refetch];
