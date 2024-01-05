@@ -8,6 +8,7 @@ import usecarts from '../pages/Hooks/usecarts';
 import { ImSpoonKnife } from "react-icons/im";
 import { RiMenuAddFill } from "react-icons/ri";
 import { FaUsersLine } from "react-icons/fa6";
+import useAdmin from '../pages/Hooks/useAdmin';
 
 
 
@@ -15,6 +16,7 @@ import { FaUsersLine } from "react-icons/fa6";
 function DeshBoard() {
   const [cart] = usecarts();
   const isAdmin = true;
+  // const [isAdmin] = useAdmin();
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
