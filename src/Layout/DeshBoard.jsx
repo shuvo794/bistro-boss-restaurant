@@ -1,22 +1,25 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from "react-router-dom";
 import { IoMdHome } from "react-icons/io";
-import { FaBook, FaCalendarAlt, FaEnvelope, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import {
+  FaBook,
+  FaCalendarAlt,
+  FaEnvelope,
+  FaShoppingCart,
+  FaWallet,
+} from "react-icons/fa";
 import { MdOutlinePreview } from "react-icons/md";
 import { IoBagAddSharp, IoMenu } from "react-icons/io5";
 import { CiShop } from "react-icons/ci";
-import usecarts from '../pages/Hooks/usecarts';
+import usecarts from "../pages/Hooks/usecarts";
 import { ImSpoonKnife } from "react-icons/im";
 import { RiMenuAddFill } from "react-icons/ri";
 import { FaUsersLine } from "react-icons/fa6";
-import useAdmin from '../pages/Hooks/useAdmin';
-
-
-
+import useAdmin from "../pages/Hooks/useAdmin";
 
 function DeshBoard() {
   const [cart] = usecarts();
-  const isAdmin = true;
-  // const [isAdmin] = useAdmin();
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -42,7 +45,7 @@ function DeshBoard() {
           </h1>
           <br />
 
-          {isAdmin ? (
+          {isAdmin ? 
             <>
               <li className="text-base">
                 <NavLink to="/deshboard/home">
@@ -77,7 +80,7 @@ function DeshBoard() {
                 </NavLink>
               </li>
             </>
-          ) : (
+           : 
             <>
               <li className="text-base">
                 <NavLink to="/deshboard/home">
@@ -116,7 +119,7 @@ function DeshBoard() {
                 </NavLink>
               </li>
             </>
-          )}
+          }
 
           <div className="divider"></div>
 
@@ -148,4 +151,4 @@ function DeshBoard() {
   );
 }
 
-export default DeshBoard
+export default DeshBoard;
