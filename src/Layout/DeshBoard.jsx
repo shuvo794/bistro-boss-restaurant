@@ -45,7 +45,7 @@ function DeshBoard() {
           </h1>
           <br />
 
-          {isAdmin ? 
+          {isAdmin ? (
             <>
               <li className="text-base">
                 <NavLink to="/deshboard/home">
@@ -80,7 +80,7 @@ function DeshBoard() {
                 </NavLink>
               </li>
             </>
-           : 
+          ) : (
             <>
               <li className="text-base">
                 <NavLink to="/deshboard/home">
@@ -119,7 +119,7 @@ function DeshBoard() {
                 </NavLink>
               </li>
             </>
-          }
+          )}
 
           <div className="divider"></div>
 
