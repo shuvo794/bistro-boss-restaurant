@@ -16,6 +16,7 @@ function Home() {
         <title>Bistro Boss/Home</title>
         
       </Helmet>
+      
       <Banner></Banner>
       <Catagory></Catagory>
       <BistroSection></BistroSection> 
