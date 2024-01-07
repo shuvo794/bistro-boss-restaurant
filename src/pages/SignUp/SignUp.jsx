@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import authincation2 from '../../assets/others/authentication2.png';
+import authincation2 from "../../assets/others/authentication2.png";
 import SocalSite from "../../Components/SocalSite/SocalSite";
 
 function SignUp() {
@@ -62,7 +62,6 @@ function SignUp() {
       </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
@@ -165,8 +164,8 @@ function SignUp() {
           </div>
 
           <div className="md:w-1/2  p-15 ">
-         <img src={authincation2} alt="" />
-        </div>
+            <img src={authincation2} alt="" />
+          </div>
         </div>
       </div>
     </>
