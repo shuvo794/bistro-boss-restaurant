@@ -20,12 +20,19 @@ const usecarts = () => {
       );
       return response.json();
     },
+    // queryFn: async () => {
+    //   const response = await fetch(
+    //     `http://localhost:5000/carts?email=${user?.email}`,
+    //     {
+    //       headers: {
+    //         authorization: `barrer ${token}`,
+    //       },
+    //     }
+    //   );
+    //   return response.json();
+    // },
   });
-  // queryFn: async () => {
-  //   const res = await axiosSecure.get(`/carts?email=${user?.email}`);
-  //   console.log("test res", res);
-  //   return res.data;
-  // },
+ 
 
   return [cart, refetch];
 };
