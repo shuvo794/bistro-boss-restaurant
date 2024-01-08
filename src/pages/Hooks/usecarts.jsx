@@ -32,7 +32,6 @@ const usecarts = () => {
     //   return response.json();
     // },
   });
- 
 
   return [cart, refetch];
 };
