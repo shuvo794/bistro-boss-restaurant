@@ -107,7 +107,7 @@ function Login() {
                   placeholder="type text avobe"
                   name="Captca"
                   className="input input-bordered"
-                  required
+                  
                 />
               </div>
               <div className="form-control mt-6">
