@@ -8,7 +8,7 @@ const usecarts = () => {
   const token = localStorage.getItem("access-token");
   // const [axiosSecure] = useAxiosSecure();
   const { refetch, data: cart = [] } = useQuery({
-    queryKey: ["cart", user?.email],
+    queryKey: ["carts", user?.email],
     queryFn: async () => {
       const response = await fetch(
         `http://localhost:5000/carts?email=${user?.email}`,
@@ -20,6 +20,9 @@ const usecarts = () => {
       );
       return response.json();
     },
+
+// Todo Axcios note use now 
+
     // queryFn: async () => {
     //   const response = await fetch(
     //     `http://localhost:5000/carts?email=${user?.email}`,
