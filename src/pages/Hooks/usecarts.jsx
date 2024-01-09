@@ -11,13 +11,11 @@ const usecarts = () => {
   const { refetch, data: cart = [] } = useQuery({
     queryKey: ["carts", user?.email],
     queryFn: async () => {
-      const response = await axiosSecure.get(
-        `/carts?email=${user?.email}`
-      );
+      const response = await axiosSecure.get(`/carts?email=${user?.email}`);
       return response.data;
     },
 
-// Todo Axcios note use now 
+    // Todo Axcios note use now
 
     // queryFn: async () => {
     //   const response = await fetch(
@@ -28,7 +26,7 @@ const usecarts = () => {
     //       },
     //     }
     //   );
-      // return response.json();
+    // return response.json();
     // },
   });
 
