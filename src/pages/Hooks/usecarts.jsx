@@ -6,28 +6,28 @@ import useAxiosSecure from "./useAxiosSecure";
 const usecarts = () => {
   const { user } = useAuth();
 
-  // const token = localStorage.getItem("access-token");
-  const [axiosSecure] = useAxiosSecure();
+  const token = localStorage.getItem("access-token");
+  // const [axiosSecure] = useAxiosSecure();
   const { refetch, data: cart = [] } = useQuery({
-    queryKey: ["carts", user?.email],
-    queryFn: async () => {
-      const response = await axiosSecure.get(`/carts?email=${user?.email}`);
-      return response.data;
-    },
-
-    // Todo Axcios note use now
-
+    // queryKey: ["carts", user?.email],
     // queryFn: async () => {
-    //   const response = await fetch(
-    //     `http://localhost:5000/carts?email=${user?.email}`,
-    //     {
-    //       headers: {
-    //         authorization: `barrer ${token}`,
-    //       },
-    //     }
-    //   );
-    // return response.json();
+    //   const response = await axiosSecure.get(`/carts?email=${user?.email}`);
+    //   return response.data;
     // },
+
+// Todo Axcios note use now 
+
+    queryFn: async () => {
+      const response = await fetch(
+        `http://localhost:5000/carts?email=${user?.email}`,
+        {
+          headers: {
+            authorization: `barrer ${token}`,
+          },
+        }
+      );
+      return response.json();
+    },
   });
 
   return [cart, refetch];
