@@ -3,9 +3,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
 
 
 function AllUsers() {
+  const [axiosSecure] = useAxiosSecure();
     const { refetch, data: users = [] } = useQuery({
        queryKey: ["users"],
        queryFn: async () => {
