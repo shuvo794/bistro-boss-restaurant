@@ -112,7 +112,7 @@ function Login() {
               </div>
               <div className="form-control mt-6">
                 <input
-                  disabled={disable}
+                  disabled={false}
                   className="btn btn-primary"
                   type="submit"
                   value="LOGIN"
