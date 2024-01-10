@@ -5,8 +5,8 @@ function AddItem() {
   return (
     <div>
       <SectionTittle
-        subHeading={"Should Try"}
-        heading={"RECOMMENDS"}
+        subHeading={"What's new?"}
+        heading={"ADD AN ITEM"}
       ></SectionTittle>
     </div>
   );
