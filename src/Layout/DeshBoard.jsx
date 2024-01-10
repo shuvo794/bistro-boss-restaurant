@@ -54,7 +54,7 @@ function DeshBoard() {
               </li>
 
               <li className="text-base">
-                <NavLink to="/deshboard/reservation">
+                <NavLink to="/deshboard/additem">
                   <ImSpoonKnife /> AddItems
                 </NavLink>
               </li>
