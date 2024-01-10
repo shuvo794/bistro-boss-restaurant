@@ -9,6 +9,7 @@ function AddItem() {
         heading={"ADD AN ITEM"}
           ></SectionTittle>
           
+          
     </div>
   );
 }
