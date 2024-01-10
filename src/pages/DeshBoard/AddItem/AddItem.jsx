@@ -7,7 +7,8 @@ function AddItem() {
       <SectionTittle
         subHeading={"What's new?"}
         heading={"ADD AN ITEM"}
-      ></SectionTittle>
+          ></SectionTittle>
+          
     </div>
   );
 }
