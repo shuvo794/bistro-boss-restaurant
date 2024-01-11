@@ -65,7 +65,6 @@ function AuthProvider({ children }) {
       } else {
         localStorage.removeItem("access-token");
       }
-      
     });
     return () => {
       return unSubcribe;
