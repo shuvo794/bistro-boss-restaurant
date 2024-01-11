@@ -94,7 +94,8 @@ function DeshBoard() {
               <li className="text-base">
                 <NavLink to="/deshboard/history">
                   <FaWallet /> Payment History
-                </NavLink>
+                  </NavLink>
+                  
               </li>
               <li className="text-base">
                 <NavLink to="/deshboard/mycart">
