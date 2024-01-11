@@ -7,12 +7,11 @@ import {
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Swal from 'sweetalert2'
-import authincation1 from '../../assets/others/authentication2.png';
+import Swal from "sweetalert2";
+import authincation1 from "../../assets/others/authentication2.png";
 import SocalSite from "../../Components/SocalSite/SocalSite";
 
 function Login() {
-  
   const [disable, setDisable] = useState(true);
   const { signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -33,24 +32,23 @@ function Login() {
       const user = result.user;
       console.log(user);
       Swal.fire({
-  title: "user Log in successfully",
-  showClass: {
-    popup: `
+        title: "user Log in successfully",
+        showClass: {
+          popup: `
       animate__animated
       animate__fadeInUp
       animate__faster
-    `
-  },
-  hideClass: {
-    popup: `
+    `,
+        },
+        hideClass: {
+          popup: `
       animate__animated
       animate__fadeOutDown
       animate__faster
-    `
-  }
-  
+    `,
+        },
       });
-       navigate(from, { replace: true });
+      navigate(from, { replace: true });
     });
   };
 
@@ -108,7 +106,6 @@ function Login() {
                   placeholder="type text avobe"
                   name="Captca"
                   className="input input-bordered"
-                  
                 />
               </div>
               <div className="form-control mt-6">
