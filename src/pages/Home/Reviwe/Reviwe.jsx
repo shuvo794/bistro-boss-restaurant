@@ -21,6 +21,7 @@ function Reviwe() {
       .then((res) => res.json())
       .then((data) => setReviwe(data));
   }, []);
+  
 
   return (
     <section className="my-24">
