@@ -4,10 +4,9 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import usecarts from "../../Hooks/usecarts";
 
-
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user)
+  console.log(user);
   const [cart] = usecarts();
 
   const handelLogOut = () => {
