@@ -74,9 +74,6 @@ function DeshBoard() {
               <li className="text-base">
                 <NavLink to="/deshboard/allusers">
                   <FaUsersLine /> All User
-                  {/* <span className="badge badge-secondary">
-                    +{cart?.length || 0}
-                  </span> */}
                 </NavLink>
               </li>
             </>

@@ -7,6 +7,7 @@ import usecarts from "../../Hooks/usecarts";
 
 function Navbar() {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user)
   const [cart] = usecarts();
 
   const handelLogOut = () => {
@@ -39,15 +40,13 @@ function Navbar() {
       </li>
 
       <li>
-        <Link to="/deshboard">
+        <Link to="/deshboard/mycart">
           <button className="btn">
             <FaShoppingCart />
             <div className="badge badge-secondary">+{cart?.length || 0}</div>
           </button>
         </Link>
       </li>
-
-      
     </>
   );
 
