@@ -27,14 +27,7 @@ const NavBar = () => {
                 </button>
             </Link>
         </li>
-        {
-            user ? <>
-                {/* <span>{user?.displayName}</span> */}
-                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
-            </> : <>
-                <li><Link to="/login">Login</Link></li>
-            </>
-        }
+       
     </>
 
     return (
@@ -66,17 +59,29 @@ const NavBar = () => {
               </ul>
             </div>
             <p className="ml-3 font-bold">
-              Yeami 
+              Yeami
               <br />
               Resturent
             </p>
-            
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navOptions}</ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Get started</a>
+            {user ? (
+              <>
+                {/* <span>{user?.displayName}</span> */}
+                <button onClick={handleLogOut} className="btn btn-ghost">
+                  LogOut
+                </button>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              </>
+            )}
           </div>
         </div>
       </>
