@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="p-4 footer-center bg-base-300 text-base-content">
           <div>
-            <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+            <p>Copyright © 2024 - All right reserved by Shuvo</p>
           </div>
         </div>
       </footer>
