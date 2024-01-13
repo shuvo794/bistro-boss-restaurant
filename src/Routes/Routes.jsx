@@ -21,50 +21,57 @@ import AddItems from "../pages/AddItems/AddItems";
       element: <Main></Main>,
       children: [
         {
-            path: '/',
-            element: <Home></Home>
-        }, 
-        {
-          path: 'menu', 
-          element: <Menu></Menu>
+          path: "/",
+          element: <Home></Home>,
         },
         {
-          path: 'order/:category',
-          element: <Order></Order>
+          path: "menu",
+          element: <Menu></Menu>,
         },
         {
-          path: 'login',
-          element: <Login></Login>
+          path: "order/:category",
+          element: <Order></Order>,
         },
         {
-          path: 'signup',
-          element: <SignUp></SignUp>
+          path: "login",
+          element: <Login></Login>,
         },
         {
-          path: 'secret',
-          element: <PrivateRoute><Secret></Secret></PrivateRoute>
-        }
-      ]
+          path: "signup",
+          element: <SignUp></SignUp>,
+        },
+        {
+          path: "secret",
+          element: (
+            <PrivateRoute>
+              <Secret></Secret>
+            </PrivateRoute>
+          ),
+        },
+      ],
     },
     {
-      path: 'dashboard',
-      element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      path: "dashboard",
+      element: (
+        <PrivateRoute>
+          <Dashboard></Dashboard>
+        </PrivateRoute>
+      ),
       children: [
         {
-          path: 'cart',
-          element: <Cart></Cart>
-        },
-        {
-          path: 'addItems',
-          element: <AddItems></AddItems>
+          path: "cart",
+          element: <Cart></Cart>,
         },
 
         // admin routes
         {
-          path: 'users',
-          element: <AllUsers></AllUsers>
-        }
-
-      ]
-    }
+          path: "users",
+          element: <AllUsers></AllUsers>,
+        },
+        {
+          path: "addItems",
+          element: <AddItems></AddItems>,
+        },
+      ],
+    },
   ]);
