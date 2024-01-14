@@ -1,13 +1,22 @@
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-
+import { useForm } from "react-hook-form";
 const AddItems = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+  console.log(errors);
   return (
     <div>
       <SectionTitle
         subHeading={"What's new?"}
         heading={"ADD AN ITEM"}
       ></SectionTitle>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label className="form-control w-full max-w-xs">
           <div className="label">
             <span className="label-text">Recipe name*</span>
@@ -15,6 +24,7 @@ const AddItems = () => {
           <input
             type="text"
             placeholder="Recipe name"
+            {...register("name", { required: true, maxLength: 120 })}
             className="input input-bordered w-full max-w-xs"
           />
         </label>
@@ -22,7 +32,10 @@ const AddItems = () => {
           <div className="label">
             <span className="label-text">Category*</span>
           </div>
-          <select className="select select-bordered">
+          <select
+            {...register("category", { required: true })}
+            className="select select-bordered"
+          >
             <option disabled selected>
               Category
             </option>
@@ -40,6 +53,7 @@ const AddItems = () => {
           <input
             type="number"
             placeholder="Price"
+            {...register("price", { required: true })}
             className="input input-bordered w-full max-w-xs"
           />
         </label>
@@ -50,15 +64,17 @@ const AddItems = () => {
           <textarea
             className="textarea textarea-bordered h-24"
             placeholder="Recipe Details"
+            {...register("details", { required: true })}
           ></textarea>
         </label>
-        <label className="form-control w-full max-w-xs mt-5">
-         
+        <label className="form-control w-full max-w-xs">
+          <div className="label">
+            <span className="label-text">Items Image*</span>
+          </div>
           <input
             type="file"
             className="file-input file-input-bordered w-full max-w-xs"
           />
-          
         </label>
       </form>
     </div>
