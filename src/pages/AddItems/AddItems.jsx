@@ -29,8 +29,8 @@ const AddItems = () => {
             <option>Pizza</option>
             <option>Salad</option>
             <option>Soup</option>
-            <option>Drinks</option>
             <option>Dessert</option>
+            <option>Drinks</option>
           </select>
         </label>
       </form>
