@@ -64,7 +64,7 @@ const AddItems = () => {
           <textarea
             className="textarea textarea-bordered h-24"
             placeholder="Recipe Details"
-            {...register("details", { required: true })}
+            {...register("recipe", { required: true })}
           ></textarea>
         </label>
         <label className="form-control w-full max-w-xs">
@@ -73,6 +73,7 @@ const AddItems = () => {
           </div>
           <input
             type="file"
+            {...image("recipe", { required: true })}
             className="file-input file-input-bordered w-full max-w-xs"
           />
         </label>
