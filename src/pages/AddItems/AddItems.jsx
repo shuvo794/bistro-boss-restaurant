@@ -9,18 +9,18 @@ const AddItems = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-    const onSubmit = (data) => {
-        const formData = new FormData();
-        formData.append('image', data.image[0])
-        
-        fetch(image_hosting_url, {
-            method: 'POST',
-            body:formData
-        })
-            .then(res => res.json())
-            .then(imgResponse => {
-            console.log(imgResponse)
-        })
+  const onSubmit = (data) => {
+    const formData = new FormData();
+    formData.append("image", data.image[0]);
+
+    fetch(image_hosting_url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((imgResponse) => {
+        console.log(imgResponse);
+      });
     console.log(data);
   };
   console.log(errors);
