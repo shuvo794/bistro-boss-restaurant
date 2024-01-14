@@ -52,6 +52,14 @@ const AddItems = () => {
             placeholder="Recipe Details"
           ></textarea>
         </label>
+        <label className="form-control w-full max-w-xs mt-5">
+         
+          <input
+            type="file"
+            className="file-input file-input-bordered w-full max-w-xs"
+          />
+          
+        </label>
       </form>
     </div>
   );
