@@ -14,7 +14,7 @@ const AddItems = () => {
           </div>
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Recipe name"
             className="input input-bordered w-full max-w-xs"
           />
         </label>
@@ -39,9 +39,18 @@ const AddItems = () => {
           </div>
           <input
             type="number"
-            placeholder="Type here"
+            placeholder="Price"
             className="input input-bordered w-full max-w-xs"
           />
+        </label>
+        <label className="form-control">
+          <div className="label">
+            <span className="label-text">Recipe Details*</span>
+          </div>
+          <textarea
+            className="textarea textarea-bordered h-24"
+            placeholder="Recipe Details"
+          ></textarea>
         </label>
       </form>
     </div>
