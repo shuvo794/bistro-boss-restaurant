@@ -1,3 +1,4 @@
+import { FaUtensils } from "react-icons/fa";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 const AddItems = () => {
@@ -17,7 +18,7 @@ const AddItems = () => {
         heading={"ADD AN ITEM"}
       ></SectionTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full my-4">
           <div className="label">
             <span className="label-text">Recipe name*</span>
           </div>
@@ -25,39 +26,41 @@ const AddItems = () => {
             type="text"
             placeholder="Recipe name"
             {...register("name", { required: true, maxLength: 120 })}
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
           />
         </label>
-        <label className="form-control w-full max-w-xs">
-          <div className="label">
-            <span className="label-text">Category*</span>
-          </div>
-          <select
-            {...register("category", { required: true })}
-            className="select select-bordered"
-          >
-            <option disabled selected>
-              Category
-            </option>
-            <option>Pizza</option>
-            <option>Salad</option>
-            <option>Soup</option>
-            <option>Dessert</option>
-            <option>Drinks</option>
-          </select>
-        </label>
-        <label className="form-control w-full max-w-xs">
-          <div className="label">
-            <span className="label-text">Price*</span>
-          </div>
-          <input
-            type="number"
-            placeholder="Price"
-            {...register("price", { required: true })}
-            className="input input-bordered w-full max-w-xs"
-          />
-        </label>
-        <label className="form-control">
+        <div className="flex my-4">
+          <label className="form-control w-full ">
+            <div className="label">
+              <span className="label-text">Category*</span>
+            </div>
+            <select
+              {...register("category", { required: true })}
+              className="select select-bordered"
+            >
+              <option disabled selected>
+                Category
+              </option>
+              <option>Pizza</option>
+              <option>Salad</option>
+              <option>Soup</option>
+              <option>Dessert</option>
+              <option>Drinks</option>
+            </select>
+          </label>
+          <label className="form-control w-full ml-4 ">
+            <div className="label">
+              <span className="label-text">Price*</span>
+            </div>
+            <input
+              type="number"
+              placeholder="Price"
+              {...register("price", { required: true })}
+              className="input input-bordered w-full "
+            />
+          </label>
+        </div>
+        <label className="form-control my-4">
           <div className="label">
             <span className="label-text">Recipe Details*</span>
           </div>
@@ -67,16 +70,20 @@ const AddItems = () => {
             {...register("recipe", { required: true })}
           ></textarea>
         </label>
-        <label className="form-control w-full max-w-xs">
+        <label className="form-control w-full max-w-xs my-4">
           <div className="label">
             <span className="label-text">Items Image*</span>
           </div>
           <input
             type="file"
-            {...image("recipe", { required: true })}
-            className="file-input file-input-bordered w-full max-w-xs"
+            {...register("image", { required: true })}
+            className="file-input file-input-bordered w-full "
           />
         </label>
+        <button className="btn btn-sm bg-[red] my-4">
+          <FaUtensils className="mr-1" />{" "}
+          <input type="submit" value="Add Item" />
+        </button>
       </form>
     </div>
   );
