@@ -9,21 +9,21 @@ import Call_Us from "../Call_Us/Call_Us";
 import Chef_Say from "../Chef_Say/Chef_Say";
 
 const Home = () => {
-    return (
-        <div>
-            <Helmet>
-                <title>Bistro Boss | Home</title>
-            </Helmet>
-            <Banner></Banner>
-            <Category></Category>
-            <Yeami></Yeami>
-            <PopularMenu></PopularMenu>
-            <Call_Us></Call_Us>
-            <Chef_Say></Chef_Say>
-            <Featured></Featured>
-            <Testimonials></Testimonials>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Bistro Boss | Home</title>
+      </Helmet>
+      <Banner></Banner>
+      <Category></Category>
+      <Yeami></Yeami>
+      <PopularMenu></PopularMenu>
+      <Call_Us></Call_Us>
+      <Chef_Say></Chef_Say>
+      <Featured></Featured>
+      <Testimonials></Testimonials>
+    </div>
+  );
 };
 
 export default Home;
