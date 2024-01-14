@@ -120,8 +120,7 @@ const Login = () => {
             <SocialLogin></SocialLogin>
           </div>
           <div className="text-center md:w-1/2 lg:text-left p-5">
-           <img src={authincation2} alt="" /> 
-           
+            <img src={authincation2} alt="" />
           </div>
         </div>
       </div>
