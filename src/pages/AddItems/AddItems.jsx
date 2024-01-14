@@ -1,12 +1,16 @@
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 
 
 const AddItems = () => {
     return (
-        <div>
-            This is add iteam
-        </div>
-    )
+      <div>
+        <SectionTitle
+          subHeading={"What's new?"}
+          heading={"ADD AN ITEM"}
+        ></SectionTitle>
+      </div>
+    );
 }
 
 export default AddItems;
