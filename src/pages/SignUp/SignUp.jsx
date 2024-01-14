@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
-
+import authencation from "../../assets/others/authentication.gif";
 const SignUp = () => {
   const axiosPublic = useAxiosPublic();
   const {
@@ -55,15 +55,7 @@ const SignUp = () => {
       </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Sign up now!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-          </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -161,6 +153,10 @@ const SignUp = () => {
               </small>
             </p>
             <SocialLogin></SocialLogin>
+          </div>
+
+          <div className="text-center md:w-1/2 lg:text-left p-5">
+            <img src={authencation} alt="" />
           </div>
         </div>
       </div>
