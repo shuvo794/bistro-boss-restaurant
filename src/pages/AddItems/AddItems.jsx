@@ -1,16 +1,32 @@
 import { FaUtensils } from "react-icons/fa";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
+
+const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
+    const onSubmit = (data) => {
+        const formData = new FormData();
+        formData.append('image', data.image[0])
+        
+        fetch(image_hosting_url, {
+            method: 'POST',
+            body:formData
+        })
+            .then(res => res.json())
+            .then(imgResponse => {
+            console.log(imgResponse)
+        })
     console.log(data);
   };
   console.log(errors);
+  console.log("Token", image_hostin_token);
+
+  const image_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${image_hostin_token}`;
   return (
     <div>
       <SectionTitle
@@ -35,12 +51,11 @@ const AddItems = () => {
               <span className="label-text">Category*</span>
             </div>
             <select
+              defaultValue="Category"
               {...register("category", { required: true })}
               className="select select-bordered"
             >
-              <option disabled selected>
-                Category
-              </option>
+              <option disabled>Category</option>
               <option>Pizza</option>
               <option>Salad</option>
               <option>Soup</option>
