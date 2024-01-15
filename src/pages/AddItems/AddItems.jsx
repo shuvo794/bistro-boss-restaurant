@@ -2,11 +2,12 @@ import { FaUtensils } from "react-icons/fa";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
   const axiosSecure = useAxiosSecure();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit,reset } = useForm();
   const onSubmit = (data) => {
     const formData = new FormData();
     formData.append("image", data.image[0]);
@@ -30,6 +31,16 @@ const AddItems = () => {
           console.log(newItem);
           axiosSecure.post("/menu", newItem).then((data) => {
             console.log("after posting new item", data.data);
+            if (data.data.insertedId) {
+              reset();
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Item Add a SuccessFully",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+            }
           });
         }
       });
