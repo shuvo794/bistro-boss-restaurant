@@ -6,11 +6,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure";
 const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
   const axiosSecure = useAxiosSecure();
-  const {
-    register,
-    handleSubmit,
-    
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     const formData = new FormData();
     formData.append("image", data.image[0]);
@@ -32,16 +28,13 @@ const AddItems = () => {
             image: imgUrl,
           };
           console.log(newItem);
-          axiosSecure.post("/menu", newItem)
-            .then(data => {
-              console.log('after posting new item', data.data);
-          })
-
+          axiosSecure.post("/menu", newItem).then((data) => {
+            console.log("after posting new item", data.data);
+          });
         }
       });
     console.log(data);
   };
-
 
   const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hostin_token}`;
   return (
