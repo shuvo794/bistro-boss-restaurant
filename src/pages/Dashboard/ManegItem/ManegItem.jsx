@@ -2,8 +2,8 @@ import SectionTittle from "../../../components/SectionTitle/SectionTitle";
 
 const ManegItem = () => {
   <SectionTittle
-    subHeading={"Should Try"}
-    heading={"RECOMMENDS"}
+    subHeading={"Hurry Up"}
+    heading={"MANAGE ALL ITEMS"}
   ></SectionTittle>;
 };
 
