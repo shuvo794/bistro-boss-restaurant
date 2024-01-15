@@ -34,8 +34,7 @@ const AddItems = () => {
       });
     console.log(data);
   };
-  console.log(errors);
-  console.log("Token", image_hostin_token);
+
 
   const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hostin_token}`;
   return (
