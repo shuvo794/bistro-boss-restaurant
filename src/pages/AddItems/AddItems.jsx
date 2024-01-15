@@ -22,7 +22,13 @@ const AddItems = () => {
         if (imgResponse.success) {
           const imgUrl = imgResponse.data.display_url;
           const { name, price, category, recipe } = data;
-          const newItem = { name, price:parseFloat(price), category, recipe ,image:imgUrl};
+          const newItem = {
+            name,
+            price: parseFloat(price),
+            category,
+            recipe,
+            image: imgUrl,
+          };
           console.log(newItem);
         }
       });
