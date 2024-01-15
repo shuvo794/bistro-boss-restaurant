@@ -5,6 +5,7 @@ import soupImg from '../../../assets/menu/soup-bg.jpg'
 import saladImg from '../../../assets/menu/salad-bg.jpg'
 import pizzaImg from '../../../assets/menu/pizza-bg.jpg'
 import dessertImg from '../../../assets/menu/dessert-bg.jpeg'
+import desiImg from "../../../assets/menu/Desi.jpg";
 import useMenu from '../../../hooks/useMenu';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 import MenuCategory from '../MenuCategory/MenuCategory';
@@ -53,7 +54,7 @@ const Menu = () => {
           img={soupImg}
         ></MenuCategory>
         <MenuCategory items={soup} title={"soup"} img={soupImg}></MenuCategory>
-        <MenuCategory items={Desi} title={"Desi"} img={soupImg}></MenuCategory>
+        <MenuCategory items={Desi} title={"Desi"} img={desiImg}></MenuCategory>
       </div>
     );
 };
