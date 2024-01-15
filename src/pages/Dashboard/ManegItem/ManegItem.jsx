@@ -1,6 +1,8 @@
 import SectionTittle from "../../../components/SectionTitle/SectionTitle";
+import useMenu from "../../../hooks/useMenu";
 
 const ManegItem = () => {
+    const [menu] = useMenu();
   return (
     <div>
       <SectionTittle
