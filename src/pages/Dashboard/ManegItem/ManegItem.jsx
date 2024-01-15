@@ -1,10 +1,15 @@
 import SectionTittle from "../../../components/SectionTitle/SectionTitle";
 
 const ManegItem = () => {
-  <SectionTittle
-    subHeading={"Hurry Up"}
-    heading={"MANAGE ALL ITEMS"}
-  ></SectionTittle>;
+  return (
+    <div>
+      <SectionTittle
+        subHeading={"Hurry Up"}
+        heading={"MANAGE ALL ITEMS"}
+      ></SectionTittle>
+      ;
+    </div>
+  );
 };
 
 export default ManegItem;
