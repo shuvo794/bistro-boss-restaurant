@@ -5,7 +5,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
-  const [axiosSecure] = useAxiosSecure();
+  const axiosSecure = useAxiosSecure();
   const {
     register,
     handleSubmit,
@@ -32,6 +32,11 @@ const AddItems = () => {
             image: imgUrl,
           };
           console.log(newItem);
+          axiosSecure.post("/menu", newItem)
+            .then(data => {
+              console.log('after posting new item', data.data);
+          })
+
         }
       });
     console.log(data);
