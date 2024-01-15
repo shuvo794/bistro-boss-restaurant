@@ -19,7 +19,12 @@ const AddItems = () => {
     })
       .then((res) => res.json())
       .then((imgResponse) => {
-        console.log(imgResponse);
+        if (imgResponse.success) {
+          const imgUrl = imgResponse.data.display_url;
+          const { name, price, category, recipe } = data;
+          const newItem = { name, price:parseFloat(price), category, recipe ,image:imgUrl};
+          console.log(newItem);
+        }
       });
     console.log(data);
   };
@@ -60,6 +65,7 @@ const AddItems = () => {
               <option>Salad</option>
               <option>Soup</option>
               <option>Dessert</option>
+              <option>Desi</option>
               <option>Drinks</option>
             </select>
           </label>
