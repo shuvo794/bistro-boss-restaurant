@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
   const axiosSecure = useAxiosSecure();
-  const { register, handleSubmit,reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const formData = new FormData();
     formData.append("image", data.image[0]);
