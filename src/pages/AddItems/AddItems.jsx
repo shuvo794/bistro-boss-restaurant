@@ -1,13 +1,15 @@
 import { FaUtensils } from "react-icons/fa";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useForm } from "react-hook-form";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const image_hostin_token = import.meta.env.VITE_image_uploadToken;
 const AddItems = () => {
+  const [axiosSecure] = useAxiosSecure();
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    
   } = useForm();
   const onSubmit = (data) => {
     const formData = new FormData();
