@@ -13,6 +13,7 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AddItems from "../pages/AddItems/AddItems";
 import AdminRoute from "./AdminRoute";
 import ManegItem from "../pages/Dashboard/ManegItem/ManegItem";
+import UpdateValue from "../pages/Dashboard/ManegItem/UpdateValue";
 
 export const router = createBrowserRouter([
   {
@@ -84,6 +85,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <ManegItem></ManegItem>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "update",
+        element: (
+          <AdminRoute>
+            <UpdateValue></UpdateValue>
           </AdminRoute>
         ),
       },
