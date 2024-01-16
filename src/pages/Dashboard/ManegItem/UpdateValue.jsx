@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useMenu from "../../../hooks/useMenu";
 
