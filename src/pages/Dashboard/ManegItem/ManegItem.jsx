@@ -3,7 +3,8 @@ import SectionTittle from "../../../components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const ManegItem = () => {
   const [menu, , refetch] = useMenu();
@@ -77,9 +78,9 @@ const ManegItem = () => {
                 <td>{item.category}</td>
                 <td className="text-right">${item.price}</td>
                 <td>
-                  <NavLink to="/dashboard/update">
+                  <Link to="/dashboard/update">
                     <button className="btn btn-ghost btn-xs">Update</button>
-                  </NavLink>
+                  </Link>
                 </td>
                 <td>
                   <button
