@@ -47,6 +47,8 @@ const CheckoutForm = ({price}) => {
       // console.log("PaymentMethod", paymentMethod);
     }
 
+    setProcessing(true);
+
     const {paymentIntent, error:confirmError} = await stripe.confirmCardPayment(
   clientSecret,
   {
@@ -64,6 +66,7 @@ const CheckoutForm = ({price}) => {
     }
 
     console.log("paymentIntent", paymentIntent);
+    setProcessing(false);
     if (paymentIntent.status === 'succeeded') {
       const tranjuction_id = paymentIntent.id;
     }
@@ -90,7 +93,7 @@ const CheckoutForm = ({price}) => {
         <button
           type="submit"
           className="btn btn-primary btn-sm mt-4"
-          disabled={!stripe || !clientSecret}
+          disabled={!stripe || !clientSecret || processing}
         >
           Pay
         </button>
