@@ -10,6 +10,9 @@ const CheckoutForm = ({price}) => {
   const [cardError, setCardError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [processing, setProcessing] = useState(false);
+  const [tranjuctionId, setTranjuctionId] = useState('');
+
+
   const axiosSecure = useAxiosSecure()
 
   useEffect(() => {
@@ -68,7 +71,8 @@ const CheckoutForm = ({price}) => {
     console.log("paymentIntent", paymentIntent);
     setProcessing(false);
     if (paymentIntent.status === 'succeeded') {
-      const tranjuction_id = paymentIntent.id;
+      setTranjuctionId(paymentIntent.id);
+     
     }
   };
   return (
@@ -99,6 +103,7 @@ const CheckoutForm = ({price}) => {
         </button>
       </form>
       {cardError && <p className="text-red-600">{cardError}</p>}
+      {tranjuctionId && <p className="text-green-600">Tranjuction Complete with tranjuction_id:{tranjuctionId}</p>}
     </>
   );
 };
