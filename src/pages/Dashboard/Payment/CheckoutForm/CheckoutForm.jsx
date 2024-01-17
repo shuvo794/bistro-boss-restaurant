@@ -8,7 +8,8 @@ const CheckoutForm = ({price}) => {
   const elements = useElements();
   const { user } = useAuth();
   const [cardError, setCardError] = useState("");
-   const [clientSecret, setClientSecret] = useState("");
+  const [clientSecret, setClientSecret] = useState("");
+  const [processing, setProcessing] = useState(false);
   const axiosSecure = useAxiosSecure()
 
   useEffect(() => {
@@ -62,7 +63,10 @@ const CheckoutForm = ({price}) => {
       console.log(confirmError)
     }
 
-    console.log("paymentIntent",paymentIntent);
+    console.log("paymentIntent", paymentIntent);
+    if (paymentIntent.status === 'succeeded') {
+      const tranjuction_id = paymentIntent.id;
+    }
   };
   return (
     <>
