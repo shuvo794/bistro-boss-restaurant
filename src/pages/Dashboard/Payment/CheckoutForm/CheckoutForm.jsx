@@ -6,11 +6,15 @@ const CheckoutForm = ({price}) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
+   const [clientSecret, setClientSecret] = useState("");
   const axiosSecure = useAxiosSecure()
 
   useEffect(() => {
 
-    axiosSecure.post("/create-payment-intent",{price})
+    axiosSecure.post("/create-payment-intent", { price })
+      .then(res => {
+        console.log(res.data.clientSecret);
+    })
   
 },[])
 
