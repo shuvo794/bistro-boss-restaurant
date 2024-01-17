@@ -43,7 +43,7 @@ const CheckoutForm = ({price}) => {
       setCardError(error.message);
     } else {
       setCardError("");
-      console.log("PaymentMethod", paymentMethod);
+      // console.log("PaymentMethod", paymentMethod);
     }
 
     const {paymentIntent, error:confirmError} = await stripe.confirmCardPayment(
@@ -62,7 +62,7 @@ const CheckoutForm = ({price}) => {
       console.log(confirmError)
     }
 
-    console.log(paymentIntent);
+    console.log("paymentIntent",paymentIntent);
   };
   return (
     <>
