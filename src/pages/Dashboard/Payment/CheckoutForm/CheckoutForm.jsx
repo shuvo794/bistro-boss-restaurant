@@ -103,7 +103,7 @@ const CheckoutForm = ({price}) => {
         </button>
       </form>
       {cardError && <p className="text-red-600">{cardError}</p>}
-      {tranjuctionId && <p className="text-green-600">Tranjuction Complete with tranjuction_id:{tranjuctionId}</p>}
+      {tranjuctionId && <p className="text-green-600">Tranjuction Complete with tranjuction_id : {tranjuctionId}</p>}
     </>
   );
 };
