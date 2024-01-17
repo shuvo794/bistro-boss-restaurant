@@ -57,7 +57,12 @@ const CheckoutForm = ({price}) => {
       },
     },
   },
-);
+    );
+    if (confirmError) {
+      console.log(confirmError)
+    }
+
+    console.log(paymentIntent);
   };
   return (
     <>
