@@ -3,13 +3,13 @@ import slide1 from "../../../assets/home/slide1.jpg";
 
 const Chef_Say = () => {
   return (
-    <section>
+    <div>
       <SectionTittle
         subHeading={"Should Try"}
         heading={"RECOMMENDS"}
       ></SectionTittle>
 
-      <div className="grid md:grid-cols-3 gap-5 p-4">
+      <div className="grid md:grid-cols-3 gap-5 ">
         <div className="card w-96 glass">
           <img
             style={{ width: "424px", height: "300px" }}
@@ -53,7 +53,7 @@ const Chef_Say = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
