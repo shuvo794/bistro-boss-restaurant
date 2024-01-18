@@ -19,7 +19,7 @@ const Home = () => {
       <Yeami></Yeami>
       <PopularMenu></PopularMenu>
       <Call_Us></Call_Us>
-      <Chef_Say></Chef_Say>
+      {/* <Chef_Say></Chef_Say> */}
       <Featured></Featured>
       <Testimonials></Testimonials>
     </div>
