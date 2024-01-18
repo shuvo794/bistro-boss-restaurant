@@ -5,6 +5,7 @@ import useMenu from "../../../hooks/useMenu";
 
 const UpdateValue = () => {
   const [menu, , refetch] = useMenu();
+  
   const axiosSecure = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
 

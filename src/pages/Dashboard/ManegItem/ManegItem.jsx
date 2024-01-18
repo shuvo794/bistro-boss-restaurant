@@ -79,7 +79,7 @@ const ManegItem = () => {
                 <td className="text-right">${item.price}</td>
                 <td>
                   <Link to="/dashboard/update">
-                    <button item={item} className="btn btn-ghost btn-xs">Update</button>
+                    <button className="btn btn-ghost btn-xs">Update</button>
                   </Link>
                 </td>
                 <td>
