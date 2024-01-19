@@ -6,9 +6,19 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
 
 
+
 const ManegItem = () => {
   const [menu, , refetch] = useMenu();
   const axiosSecure = useAxiosSecure();
+
+
+const handelUpdate = (item) => {
+  console.log(item._id)
+  // <UpdateValue item={item._id} />
+}
+
+
+
   const handleDeleteItem = (item) => {
     Swal.fire({
       title: "Are you sure?",
@@ -78,8 +88,8 @@ const ManegItem = () => {
                 <td>{item.category}</td>
                 <td className="text-right">${item.price}</td>
                 <td>
-                  <Link to="/dashboard/update">
-                    <button className="btn btn-ghost btn-xs">Update</button>
+                  <Link to={`/dashboard/update/${item._id}`}>
+                    <button onClick={()=>handelUpdate(item)} className="btn btn-ghost btn-xs">Update</button>
                   </Link>
                 </td>
                 <td>

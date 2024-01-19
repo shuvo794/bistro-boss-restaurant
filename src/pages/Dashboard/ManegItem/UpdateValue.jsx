@@ -2,9 +2,15 @@ import { useForm } from "react-hook-form";
 // import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useMenu from "../../../hooks/useMenu";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateValue = () => {
+  // Todo this page 
+  const loadedUser = useLoaderData();
+  console.log(loadedUser);
+
   const [menu, , refetch] = useMenu();
+
   
   const axiosSecure = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
