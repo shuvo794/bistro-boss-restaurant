@@ -25,7 +25,7 @@ const AdminHome = () => {
   
   <div className="stat">
     <div className="stat-figure text-secondary">
-      <FaWallet className="text-3xl		" />
+      <FaWallet className="text-3xl" />
 
     </div>
     <div className="stat-title">Revenue</div>
