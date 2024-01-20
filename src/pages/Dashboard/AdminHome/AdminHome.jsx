@@ -7,7 +7,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 const AdminHome = () => {
     const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
-    const { } = useQuery({
+    const {data:stats={} } = useQuery({
         queryKey: ['admin-stats'],
         queryFn: async () => {
             const res = await axiosSecure('/admin-stats')
