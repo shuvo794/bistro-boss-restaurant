@@ -25,7 +25,7 @@ const AdminHome = () => {
   
   <div className="stat">
     <div className="stat-figure text-secondary">
-      <FaWallet className="text-lg	" />
+      <FaWallet className="text-3xl		" />
 
     </div>
     <div className="stat-title">Revenue</div>
@@ -35,7 +35,7 @@ const AdminHome = () => {
   
   <div className="stat">
     <div className="stat-figure text-secondary">
-      <FaUsers />
+      <FaUsers className="text-3xl	" />
 
     </div>
     <div className="stat-title">Customers</div>
@@ -53,7 +53,7 @@ const AdminHome = () => {
                 </div>
                 <div className="stat">
     <div className="stat-figure text-secondary">
-      <LiaTruckPickupSolid />
+      <LiaTruckPickupSolid className="text-3xl"/>
 
     </div>
     <div className="stat-title">Orders</div>
