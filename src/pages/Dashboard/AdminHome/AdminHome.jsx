@@ -11,6 +11,7 @@ const AdminHome = () => {
         queryKey: ['admin-stats'],
         queryFn: async () => {
             const res = await axiosSecure('/admin-stats')
+            return res.data;
         }
     })
     return (
