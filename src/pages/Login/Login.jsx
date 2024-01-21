@@ -13,10 +13,12 @@ import authincation2 from "../../assets/others/authentication.gif";
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const { signIn } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
+  
   console.log("state in the location login page", location.state);
 
   useEffect(() => {
