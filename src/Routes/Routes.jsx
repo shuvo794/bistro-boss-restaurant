@@ -13,7 +13,6 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AddItems from "../pages/AddItems/AddItems";
 import AdminRoute from "./AdminRoute";
 import ManegItem from "../pages/Dashboard/ManegItem/ManegItem";
-import UpdateValue from "../pages/Dashboard/ManegItem/UpdateValue";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
