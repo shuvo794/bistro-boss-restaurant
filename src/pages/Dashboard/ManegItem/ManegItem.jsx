@@ -12,10 +12,10 @@ const ManegItem = () => {
   const axiosSecure = useAxiosSecure();
 
 
-const handelUpdate = (item) => {
-  console.log(item._id)
-  // <UpdateValue item={item._id} />
-}
+// const handelUpdate = (item) => {
+//   console.log(item._id)
+//   // <UpdateValue item={item._id} />
+// }
 
 
 
@@ -88,8 +88,8 @@ const handelUpdate = (item) => {
                 <td>{item.category}</td>
                 <td className="text-right">${item.price}</td>
                 <td>
-                  <Link to={`/dashboard/update/${item._id}`}>
-                    <button onClick={()=>handelUpdate(item)} className="btn btn-ghost btn-xs">Update</button>
+                  <Link to={`/dashboard/updateItem/${item._id}`}>
+                    <button  className="btn btn-ghost btn-xs">Update</button>
                   </Link>
                 </td>
                 <td>
