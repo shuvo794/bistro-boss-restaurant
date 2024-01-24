@@ -17,17 +17,17 @@ const PaymentHistory = () => {
     })
 
     return (
-        <div>
+        <div >
             <h2 className="text3-xl">Total Payments: {payments.length}</h2>
-            <div className="overflow-x-auto">
-                <table className="table table-zebra">
+            <div className="overflow-x-auto ">
+                <table className="table table-zebra  bg-red-600">
                     {/* head */}
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>price</th>
-                            <th>Transaction Id</th>
-                            <th>Status</th>
+                    <thead className="bg-red-600">
+                        <tr >
+                            <th className=" bg-red-600 text-white">#</th>
+                            <th className=" bg-red-600 text-white">price</th>
+                            <th className=" bg-red-600 text-white">Transaction Id</th>
+                            <th className=" bg-red-600 text-white">Status</th>
                         </tr>
                     </thead>
                     <tbody>
