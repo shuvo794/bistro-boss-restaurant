@@ -77,12 +77,12 @@ const AddItems = () => {
               className="select select-bordered"
             >
               <option disabled>Category</option>
-              <option>Pizza</option>
-              <option>Salad</option>
-              <option>Soup</option>
-              <option>Dessert</option>
+              <option>pizza</option>
+              <option>salad</option>
+              <option>soup</option>
+              <option>dessert</option>
               <option>Desi</option>
-              <option>Drinks</option>
+              <option>drinks</option>
             </select>
           </label>
           <label className="form-control w-full ml-4 ">
