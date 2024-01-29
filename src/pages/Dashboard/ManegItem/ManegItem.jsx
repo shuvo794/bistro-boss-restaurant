@@ -12,10 +12,7 @@ const ManegItem = () => {
   const axiosSecure = useAxiosSecure();
 
 
-// const handelUpdate = (item) => {
-//   console.log(item._id)
-//   // <UpdateValue item={item._id} />
-// }
+
 
 
 
@@ -55,7 +52,7 @@ const ManegItem = () => {
 
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
+        
           <thead>
             <tr>
               <th>#</th>
