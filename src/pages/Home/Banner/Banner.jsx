@@ -9,7 +9,7 @@ import img6 from '../../../assets/home/06.png';
 
 const Banner = () => {
     return (
-      <Carousel showThumbs={false}	 showArrows={false} infiniteLoop autoPlay>
+      <Carousel showThumbs={true}  dynamicHeight thumbWidth={200} thumbHeight={50}	 showArrows={false} infiniteLoop autoPlay>
         
         <div>
           <img src={img2} />
