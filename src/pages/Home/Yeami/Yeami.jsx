@@ -8,7 +8,7 @@ const Yeami = () => {
         blur={{ min: -60, max: 70 }}
         bgImage={chefService}
         bgImageAlt="the Menu"
-        strength={-200}
+        strength={-100}
       >
         <div className="hero h-[700px]">
           <div className="hero-overlay bg-opacity-60"></div>
