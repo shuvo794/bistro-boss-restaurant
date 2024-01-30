@@ -19,7 +19,7 @@ const Chef_Say = () => {
             alt="car!"
           />
           <div className="card-body ">
-            <h2 className="card-title ">Caeser Salad</h2>
+            <h2 className="card-title ">Pizza</h2>
             <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
             <div className="card-actions justify-center -mb-3">
               <button className="btn  uppercase">add to cart</button>
@@ -33,7 +33,7 @@ const Chef_Say = () => {
             alt="car!"
           />
           <div className="card-body ">
-            <h2 className="card-title ">Caeser Salad</h2>
+            <h2 className="card-title ">Creem Shoup</h2>
             <p>Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
             <div className="card-actions justify-center -mb-3">
               <button className="btn  uppercase">add to cart</button>
