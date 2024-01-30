@@ -5,7 +5,7 @@ const Yeami = () => {
   return (
     <div>
       <Parallax
-        blur={{ min: -80, max: 90 }}
+        blur={{ min: -60, max: 70 }}
         bgImage={chefService}
         bgImageAlt="the Menu"
         strength={-200}
