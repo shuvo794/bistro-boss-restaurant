@@ -13,7 +13,7 @@ const Chef_Say = () => {
         <div className="card w-96 glass">
           <img
             style={{ width: "424px", height: "300px" }}
-            src={slide1}
+            src={slide2}
             alt="car!"
           />
           <div className="card-body ">
