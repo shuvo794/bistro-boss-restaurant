@@ -5,15 +5,19 @@ const Footer = () => {
         <div className="footer p-10 bg-[#c23616] text-neutral-content">
           <div>
             
-            <h2 className="ml-3 font-bold mt-6">
+            <h2 className=" font-bold mt-6">
               Yeami
-              <br />
+            
               Resturent
             </h2>
-            <p>Couldn't connect with Twitter</p>
+            <p>Sed ut perspiciatis unde omnis iste natus
+<br />
+error sit voluptatem accusantium
+            </p>
+
           </div>
           <div>
-            <span className="footer-title">Social</span>
+            <h3 className="text-white ml-6 font-bold">Social</h3>
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg
@@ -49,6 +53,7 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+            <p>+88018000000</p>
           </div>
         </div>
         <div className="p-4 footer-center bg-[#c23616] text-neutral-content">
