@@ -1,9 +1,12 @@
 import useAuth from "../../../hooks/useAuth";
+import { FaUserCircle } from "react-icons/fa";
+import PaymentHistory from "../PaymentHistory/PaymentHistory";
 
 
 
 const UserHome = () => {
-    const { user } = useAuth();
+    const { user ,payments } = useAuth();
+    // const { } = PaymentHistory();
     console.log(user,"test")
     return (
         <div>
@@ -13,11 +16,18 @@ const UserHome = () => {
 
             <div className="card card-side bg-base-100 shadow-xl mt-16">
                 <figure className="w-1/3">
-                    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" />
+                    <FaUserCircle className="text-[#c23616] 	" />
+
                 </figure>
   <div className="card-body w-1/2">
-    <h2 className="card-title">Name : {user?.displayName}</h2>
-    <p>Email : {user?.email}</p>
+    
+                    <div className="mt-16">
+                        <h2 className="uppercase text-lg bg-[#c23616] text-white text-center rounded p-1" >Name : {user?.displayName}</h2>
+                        <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded mt-5 p-1">Email : {user?.email}</p>
+                    <div className="card-actions justify-end">
+                            <button className="btn btn-primary mt-5">Order :{ payments?.length} </button>
+    </div>
+                    </div>
    
   </div>
 </div>
