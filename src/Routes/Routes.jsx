@@ -114,7 +114,7 @@ export const router = createBrowserRouter([
       {
           path: 'updateItem/:id',
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader: ({params}) => fetch(`https://bistro-boss-server-tawny-xi.vercel.app/menu/${params.id}`)
+          loader: ({params}) => fetch(`https://yeami-returent.onrender.com/menu/${params.id}`)
         },
       
     ],

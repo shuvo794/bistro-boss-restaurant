@@ -14,7 +14,7 @@ const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("https://bistro-boss-server-tawny-xi.vercel.app/review")
+        fetch("https://yeami-returent.onrender.com/review")
           .then((res) => res.json())
           .then((data) => setReviews(data));
     }, [])

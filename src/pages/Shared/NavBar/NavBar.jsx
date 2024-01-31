@@ -20,7 +20,8 @@ const NavBar = () => {
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Our Menu</Link></li>
-        <li><Link to="/order/salad">Order Food</Link></li>
+      <li><Link to="/order/salad">Order Food</Link></li>
+      <p>  { user?.displayName}</p>
       {/* {isAdmin?<li><Link to="/dashboard/adminHome">DashBoard</Link></li>:
         <li><Link to="/dashboard/userHome">DashBoard</Link></li>
        } */}
