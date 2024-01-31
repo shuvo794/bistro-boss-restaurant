@@ -2,14 +2,15 @@
 const Footer = () => {
     return (
       <footer>
-        <div className="footer p-10 bg-neutral text-neutral-content">
+        <div className="footer p-10 bg-[#c23616] text-neutral-content">
           <div>
             
-            <p className="ml-3 font-bold mt-6">
+            <h2 className="ml-3 font-bold mt-6">
               Yeami
               <br />
               Resturent
-            </p>
+            </h2>
+            <p>Couldn't connect with Twitter</p>
           </div>
           <div>
             <span className="footer-title">Social</span>
@@ -50,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="p-4 footer-center bg-neutral text-neutral-content">
+        <div className="p-4 footer-center bg-[#c23616] text-neutral-content">
           <div>
             <p>Copyright © 2024 - All right reserved by Shuvo</p>
           </div>

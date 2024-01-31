@@ -20,14 +20,14 @@ const PaymentHistory = () => {
         <div >
             <h2 className="text-3xl mb-8 font-bold">Total Payments: {payments.length}</h2>
             <div className="overflow-x-auto ">
-                <table className="table table-zebra  bg-red-600 w-full">
+                <table className="table table-zebra  bg-[#c23616] w-full">
                     {/* head */}
-                    <thead className="bg-red-600">
+                    <thead className="bg-[#c23616]">
                         <tr >
-                            <th className=" bg-red-600 text-white">#</th>
-                            <th className=" bg-red-600 text-white">price</th>
-                            <th className=" bg-red-600 text-white">Transaction Id</th>
-                            <th className=" bg-red-600 text-white">Status</th>
+                            <th className=" bg-[#c23616] text-white">#</th>
+                            <th className=" bg-[#c23616] text-white">price</th>
+                            <th className=" bg-[#c23616] text-white">Transaction Id</th>
+                            <th className=" bg-[#c23616] text-white">Status</th>
                         </tr>
                     </thead>
                     <tbody>
