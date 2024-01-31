@@ -79,7 +79,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/review">
+                <NavLink to="/">
                   <FaAd></FaAd>
                   Add a Review
                 </NavLink>
