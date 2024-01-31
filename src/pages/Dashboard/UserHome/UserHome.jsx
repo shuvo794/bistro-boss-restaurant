@@ -12,10 +12,10 @@ const UserHome = () => {
             {/* User Profile  */}
 
             <div className="card card-side bg-base-100 shadow-xl mt-16">
-                <figure>
+                <figure className="w-1/3">
                     <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" />
                 </figure>
-  <div className="card-body">
+  <div className="card-body w-1/2">
     <h2 className="card-title">Name : {user?.displayName}</h2>
     <p>Email : {user?.email}</p>
    
