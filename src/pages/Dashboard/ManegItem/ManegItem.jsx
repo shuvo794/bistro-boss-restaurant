@@ -54,13 +54,13 @@ const ManegItem = () => {
         <table className="table">
         
           <thead>
-            <tr>
-              <th>#</th>
-              <th>ITEM IMAGE</th>
-              <th>ITEM NAME</th>
-              <th>PRICE</th>
-              <th>ACTION</th>
-              <th>Delete</th>
+            <tr >
+              <th className="bg-[#c23616] text-white">#</th>
+              <th className="bg-[#c23616] text-white">ITEM IMAGE</th>
+              <th className="bg-[#c23616] text-white">ITEM NAME</th>
+              <th className="bg-[#c23616] text-white">PRICE</th>
+              <th className="bg-[#c23616] text-white">ACTION</th>
+              <th className="bg-[#c23616] text-white">Delete</th>
             </tr>
           </thead>
           <tbody>
