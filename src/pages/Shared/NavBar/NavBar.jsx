@@ -70,9 +70,9 @@ const NavBar = () => {
               </ul>
             </div>
             <p className="ml-3 font-bold">
-              Yeami
+             bistro-boss
               <br />
-              Resturent
+               Resturent
             </p>
           </div>
           <div className="navbar-center hidden lg:flex">

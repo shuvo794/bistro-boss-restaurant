@@ -6,7 +6,8 @@ const Footer = () => {
           <div>
             
             <h2 className=" font-bold mt-6">
-              Yeami
+             bistro-boss
+
             
               Resturent
             </h2>
