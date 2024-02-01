@@ -29,9 +29,9 @@ const UserHome = () => {
                         <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-1">Email : {user?.email}</p>
                     <div className="card-actions justify-end">
                            <Link to="/dashboard/cart">
-                <button className="btn mt-6">
+                <button className="btn bg-[#c23616] mt-6">
                     <FaShoppingCart className="mr-2"></FaShoppingCart>
-                    <div className="badge badge-secondary">+{cart.length}</div>
+                    <div className="badge bg-primary">+{cart.length}</div>
                 </button>
             </Link>
     </div>

@@ -81,7 +81,7 @@ const NavBar = () => {
             <ul className="menu menu-horizontal px-1">{navOptions}</ul>
           </div>
           <div className="navbar-end">
-            <div className="">{ user?.displayName}</div>
+            <div className="uppercase">{ user?.displayName}</div>
             {user ? (
               <>
                 {/* <span>{user?.displayName}</span> */}
