@@ -7,7 +7,7 @@ import { FaUserCircle } from "react-icons/fa";
 const UserHome = () => {
     const { user } = useAuth();
   
-    console.log(user,"test")
+   
     return (
         <div>
             <h1 className="text-3xl font-bold bg-[#c23616] text-white p-2 text-center">Welcome Back User Home page</h1>
