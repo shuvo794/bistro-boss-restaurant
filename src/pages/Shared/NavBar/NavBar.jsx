@@ -22,9 +22,7 @@ const NavBar = () => {
         <li><Link to="/menu">Our Menu</Link></li>
       <li><Link to="/order/salad">Order Food</Link></li>
      
-      {/* {isAdmin?<li><Link to="/dashboard/adminHome">DashBoard</Link></li>:
-        <li><Link to="/dashboard/userHome">DashBoard</Link></li>
-       } */}
+     
       
        {
             user && isAdmin && <li><Link to="/dashboard/adminHome">Dashboard</Link></li>
