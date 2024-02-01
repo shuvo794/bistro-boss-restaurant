@@ -1,6 +1,8 @@
 import useAuth from "../../../hooks/useAuth";
 import { FaUserCircle } from "react-icons/fa";
+import { FaShoppingCart } from 'react-icons/fa';
 import useCart from "../../../hooks/useCart";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,7 +28,12 @@ const UserHome = () => {
                         <h2 className="uppercase text-lg bg-[#c23616] text-white text-center rounded-lg p-1" >Name : {user?.displayName}</h2>
                         <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-1">Email : {user?.email}</p>
                     <div className="card-actions justify-end">
-                            <button className="btn btn-primary mt-5">Order - {cart.length} </button>
+                           <Link to="/dashboard/cart">
+                <button className="btn mt-6">
+                    <FaShoppingCart className="mr-2"></FaShoppingCart>
+                    <div className="badge badge-secondary">+{cart.length}</div>
+                </button>
+            </Link>
     </div>
                     </div>
    
