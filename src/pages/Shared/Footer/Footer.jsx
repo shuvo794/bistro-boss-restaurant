@@ -8,8 +8,6 @@ const Footer = () => {
             <h2 className=" font-bold mt-6">
              bistro-boss
 
-            
-              Resturent
             </h2>
             <p>Sed ut perspiciatis unde omnis iste natus
 <br />
