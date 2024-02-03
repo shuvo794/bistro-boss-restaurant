@@ -9,8 +9,8 @@ const Footer = () => {
               Bistro-Boss
             </h2>
             <p>Sed ut perspiciatis unde omnis iste natus
-<br />
-error sit voluptatem accusantium
+            <br />
+            error sit voluptatem accusantium
             </p>
 
           </div>
