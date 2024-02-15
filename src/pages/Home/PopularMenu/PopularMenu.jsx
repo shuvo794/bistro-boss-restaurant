@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const PopularMenu = () => {
     const [menu] = useMenu();
-    const popular = menu.filter(item => item.category === 'popular');
+    const popular = menu.filter(item => item.category === 'pizza');
     
     return (
         <section className="mb-12 ">
