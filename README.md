@@ -20,5 +20,4 @@ A Restaurant management system is a database system that can be used for mapping
 | React Sweet Alert      |                  |
 
 User  Interface
-
-https://i.ibb.co/d5ByKd0/screencapture-bistro-boss-744ee-web-app-2024-02-17-10-11-21.png
+https://ibb.co/qrBw1tM
