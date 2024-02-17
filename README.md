@@ -21,7 +21,8 @@ A Restaurant management system is a database system that can be used for mapping
 
 User  Interface
 
-![User Interface](https://ibb.co/qrBw1tM/User.png)
+![Pi7_Tool_screencapture-bistro-boss-744ee-web-app-2024-02-17-10_11_21 (1)](https://github.com/shuvo794/bistro-boss-restaurant/assets/81945670/9562d590-abdc-4fb6-a89a-04188037552e)
+
 
 
 
