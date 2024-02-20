@@ -66,18 +66,15 @@ const AdminHome = () => {
         <div>
             <h1 className="text-3xl font-bold">Welcome Back {user?.displayName}</h1>
             <br />
-
-            <div className="stats shadow">
-  
-  <div className="stat">
+<div className="stats shadow">
+   <div className="stat">
     <div className="stat-figure text-secondary">
       <FaWallet className="text-3xl" />
 
     </div>
     <div className="stat-title">Revenue</div>
-                    <div className="stat-value">{ stats.revinew}</div>
-    {/* <div className="stat-desc">Jan 1st - Feb 1st</div> */}
-  </div>
+      <div className="stat-value">{ stats.revinew}</div>
+</div>
   
   <div className="stat">
     <div className="stat-figure text-secondary">
@@ -101,9 +98,8 @@ const AdminHome = () => {
 
     </div>
     <div className="stat-title">Orders</div>
-                    <div className="stat-value">{stats.orders}</div>
-   
-  </div>
+    <div className="stat-value">{stats.orders}</div>
+   </div>
   
         </div>
         <br />
