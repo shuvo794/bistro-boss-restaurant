@@ -47,9 +47,7 @@ const AdminHome = () => {
    </div>
 </div>
         </div>
-        <br />
-        <br />
-        <br />
+        
          <br />
 
         <div className="stats shadow">
