@@ -3,11 +3,15 @@ import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { FaUsers, FaWallet } from "react-icons/fa";
 import { LiaTruckPickupSolid } from "react-icons/lia";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, Legend } from 'recharts';
+// import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, Legend } from 'recharts';
 
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+// const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+// const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
+import { FaUserCircle } from "react-icons/fa";
+import { FaShoppingCart } from 'react-icons/fa';
+
+import { Link } from "react-router-dom";
 
 const AdminHome = () => {
     const { user } = useAuth();
@@ -20,51 +24,57 @@ const AdminHome = () => {
         }
     })
   
-  const { data: chartData = [] } = useQuery({
-        queryKey: ['order-stats'],
-        queryFn: async () => {
-            const res = await axiosSecure.get('/order-stats');
-            return res.data;
-        }
-    })
+  // const { data: chartData = [] } = useQuery({
+  //       queryKey: ['order-stats'],
+  //       queryFn: async () => {
+  //           const res = await axiosSecure.get('/order-stats');
+  //           return res?.data;
+  //       }
+  //   })
   
+      //  console.log(chartData)
 
    // custom shape for the bar chart
-    const getPath = (x, y, width, height) => {
-        return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
-        ${x + width / 2}, ${y}
-        C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
-        Z`;
-    };
+    // const getPath = (x, y, width, height) => {
+    //     return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
+    //     ${x + width / 2}, ${y}
+    //     C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
+    //     Z`;
+    // };
 
-    const TriangleBar = (props) => {
-        const { fill, x, y, width, height } = props;
+  //   const TriangleBar = (props) => {
+  //       const { fill, x, y, width, height } = props;
 
-        return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-  };
+  //       return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+  // };
   
    // custom shape for the pie chart
-    const RADIAN = Math.PI / 180;
-    const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
-        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-        const x = cx + radius * Math.cos(-midAngle * RADIAN);
-      const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    // const RADIAN = Math.PI / 180;
+    // const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+    //     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    //     const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    //   const y = cy + radius * Math.sin(-midAngle * RADIAN);
       
-       return (
-            <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-                {`${(percent * 100).toFixed(0)}%`}
-            </text>
-        );
-    };
+    //    return (
+    //         <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+    //             {`${(percent * 100).toFixed(0)}%`}
+    //         </text>
+    //     );
+    // };
 
-    const pieChartData = chartData.map(data => {
-        return {name: data.category, value: data.revenue}
-    })
+  //   const pieChartData = chartData.map(data => {
+  //     return { name: data.category, value: data.revenue 
+  //     }
+      
+  //   })
+  // console.log(pieChartData);
   
     return (
-        <div>
-            <h1 className="text-3xl font-bold">Welcome Back {user?.displayName}</h1>
-            <br />
+      <div>
+                    <h1 className="text-3xl font-bold bg-[#c23616] text-white p-2 text-center">Welcome Back User Home page</h1>
+
+        <br />
+        
 <div className="stats shadow">
    <div className="stat">
     <div className="stat-figure text-secondary">
@@ -107,7 +117,7 @@ const AdminHome = () => {
         
         <div className="flex">
           <div className="w-1/2">
-<BarChart
+{/* <BarChart
       width={500}
       height={300}
       data={chartData}
@@ -127,13 +137,15 @@ const AdminHome = () => {
         shape={<TriangleBar />}
         label={{ position: "top" }}
       >
-        {chartData.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-        ))}
+                {chartData.map((entry, index) => {
+        return (
+           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+        )
+      })}
       </Bar>
-    </BarChart>
+    </BarChart> */}
           </div>
-           <div className="w-1/2">
+           {/* <div className="w-1/2">
                     <PieChart width={400} height={400}>
                         <Pie
                             data={pieChartData}
@@ -151,8 +163,32 @@ const AdminHome = () => {
                         </Pie>
                         <Legend></Legend>
                     </PieChart>
-                </div>
+                </div> */}
         </div>
+
+<div>
+             <div className="card card-side bg-base-100 shadow-xl mt-16">
+                <figure className="w-1/3">
+                    <FaUserCircle className="text-[#c23616] 	" />
+
+                </figure>
+                   <div className="card-body w-1/2">
+                     <div className="mt-16">
+                        <h2 className="uppercase text-lg bg-[#c23616] text-white text-center rounded-lg p-1" >Name : {user?.displayName}</h2>
+                        <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-1">Email : {user?.email}</p>
+                    <div className="card-actions justify-end">
+                           <Link to="/dashboard/cart">
+                <button className="btn bg-[#c23616] mt-6">
+                    <FaShoppingCart className="mr-2"></FaShoppingCart>
+                    {/* <div className="badge bg-primary">+{cart.length}</div> */}
+                </button>
+            </Link>
+            </div>
+         </div>
+   </div>
+</div>
+</div>
+
         </div>
     )
 }
