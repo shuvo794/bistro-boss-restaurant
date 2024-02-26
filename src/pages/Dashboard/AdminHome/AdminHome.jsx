@@ -3,9 +3,11 @@ import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { FaUsers, FaWallet } from "react-icons/fa";
 import { LiaTruckPickupSolid } from "react-icons/lia";
+import { MdAdminPanelSettings } from "react-icons/md";
 
 
-import { FaUserCircle } from "react-icons/fa";
+
+
 
 
 
@@ -26,9 +28,9 @@ const AdminHome = () => {
       <div>
     <h1 className="text-3xl font-bold bg-[#c23616] text-white p-2 text-center">Welcome To Admin Home</h1>
 <div>
-             <div className="card card-side bg-base-100 shadow-xl mt-16">
+             <div className="card card-side bg-base-100 shadow-xl mt-8">
                 <figure className="w-1/3">
-                    <FaUserCircle className="text-[#c23616] 	" />
+                    <MdAdminPanelSettings className="bg-[#c23616] 	text-white" />
 
                 </figure>
                    <div className="card-body w-1/2">
