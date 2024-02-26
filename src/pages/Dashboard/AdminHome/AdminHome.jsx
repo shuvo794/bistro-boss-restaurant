@@ -39,7 +39,7 @@ const AdminHome = () => {
                         <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-2">Email : {user?.email}</p>
                     <div className="card-actions justify-end">
             
-          <div className="text-2xl mt-3">Total Order : { stats.orders}</div>
+          <div className="text-2xl mt-3 font-bold">Total Order : +{ stats.orders}</div>
   
           
             </div>
