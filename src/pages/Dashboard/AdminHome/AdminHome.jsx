@@ -26,7 +26,7 @@ const AdminHome = () => {
        
   return (
       <div>
-    <h1 className="text-3xl font-bold bg-[#c23616] text-white p-2 text-center">Welcome To Admin Home</h1>
+    <h1 className="uppercase text-3xl font-bold bg-[#c23616] text-white p-2 text-center mb-3">Welcome To Admin Home</h1>
 <div>
              <div className="card card-side bg-base-100 shadow-xl mt-8">
                 <figure className="w-1/3">
@@ -35,8 +35,8 @@ const AdminHome = () => {
                 </figure>
                    <div className="card-body w-1/2">
                      <div className="mt-16">
-                        <h2 className="uppercase text-lg bg-[#c23616] text-white text-center rounded-lg p-1" >Name : {user?.displayName}</h2>
-                        <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-1">Email : {user?.email}</p>
+                        <h2 className="uppercase text-lg bg-[#c23616] text-white text-center rounded-lg p-2" >Name : {user?.displayName}</h2>
+                        <p className="uppercase text-sm bg-[#c23616] text-white text-center rounded-lg mt-5 p-2">Email : {user?.email}</p>
                     <div className="card-actions justify-end">
             
           <div className="text-2xl mt-3">Total Order : { stats.orders}</div>
