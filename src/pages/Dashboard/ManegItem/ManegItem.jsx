@@ -5,16 +5,9 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { Link } from "react-router-dom";
 
-
-
 const ManegItem = () => {
   const [menu, , refetch] = useMenu();
   const axiosSecure = useAxiosSecure();
-
-
-
-
-
 
   const handleDeleteItem = (item) => {
     Swal.fire({
@@ -52,9 +45,8 @@ const ManegItem = () => {
 
       <div className="overflow-x-auto">
         <table className="table">
-        
           <thead>
-            <tr >
+            <tr>
               <th className="bg-[#c23616] text-white">#</th>
               <th className="bg-[#c23616] text-white">ITEM IMAGE</th>
               <th className="bg-[#c23616] text-white">ITEM NAME</th>
@@ -86,7 +78,7 @@ const ManegItem = () => {
                 <td className="text-right">${item.price}</td>
                 <td>
                   <Link to={`/dashboard/updateItem/${item._id}`}>
-                    <button  className="btn btn-ghost btn-xs">Update</button>
+                    <button className="btn btn-ghost btn-xs">Update</button>
                   </Link>
                 </td>
                 <td>

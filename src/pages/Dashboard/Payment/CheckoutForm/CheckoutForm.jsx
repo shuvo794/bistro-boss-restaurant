@@ -2,29 +2,26 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useAuth from "../../../../hooks/useAuth";
-import './cheackoutFrom.css'
-const CheckoutForm = ({cart,price}) => {
+import "./cheackoutFrom.css";
+const CheckoutForm = ({ cart, price }) => {
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
   const [cardError, setCardError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [processing, setProcessing] = useState(false);
-  const [tranjuctionId, setTranjuctionId] = useState('');
+  const [tranjuctionId, setTranjuctionId] = useState("");
 
-
-  const axiosSecure = useAxiosSecure()
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
-    if (price>0) {
-        axiosSecure.post("/create-payment-intent", { price })
-      .then(res => {
+    if (price > 0) {
+      axiosSecure.post("/create-payment-intent", { price }).then((res) => {
         console.log(res.data.clientSecret);
-        setClientSecret(res.data.clientSecret)
-    })
-      }
-  
-},[price,axiosSecure])
+        setClientSecret(res.data.clientSecret);
+      });
+    }
+  }, [price, axiosSecure]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -38,7 +35,7 @@ const CheckoutForm = ({cart,price}) => {
       return;
     }
 
-    const { error} = await stripe.createPaymentMethod({
+    const { error } = await stripe.createPaymentMethod({
       type: "card",
       card,
     });
@@ -53,45 +50,42 @@ const CheckoutForm = ({cart,price}) => {
 
     setProcessing(true);
 
-    const {paymentIntent, error:confirmError} = await stripe.confirmCardPayment(
-  clientSecret,
-  {
-    payment_method: {
-      card: card,
-      billing_details: {
-        email: user?.email || 'unknown',
-        name:user?.displayName || 'anonymous'
-      },
-    },
-  },
-    );
+    const { paymentIntent, error: confirmError } =
+      await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+          billing_details: {
+            email: user?.email || "unknown",
+            name: user?.displayName || "anonymous",
+          },
+        },
+      });
     if (confirmError) {
-      console.log(confirmError)
+      console.log(confirmError);
     }
 
     console.log("paymentIntent", paymentIntent);
     setProcessing(false);
-    if (paymentIntent.status === 'succeeded') {
+    if (paymentIntent.status === "succeeded") {
       setTranjuctionId(paymentIntent.id);
-      //  Save the payment info server 
+      //  Save the payment info server
       const payment = {
         email: user?.email,
         tranjuctionId: paymentIntent.id,
         price,
-        date:new Date(),
+        date: new Date(),
         quantity: cart.length,
-        cartItems: cart.map(item => item._id),
-        menuItemIds:cart.map(item=>item.menuId),
-        status:'service pending',
-        itemName:cart.map(item=>item.name)
-      }
-      axiosSecure.post("/payments", payment)
-        .then(res => {
-          console.log(res.data);
-          if (res.data.insertedId) {
-            // display confrim
-          }
-      })
+        cartItems: cart.map((item) => item._id),
+        menuItemIds: cart.map((item) => item.menuId),
+        status: "service pending",
+        itemName: cart.map((item) => item.name),
+      };
+      axiosSecure.post("/payments", payment).then((res) => {
+        console.log(res.data);
+        if (res.data.insertedId) {
+          // display confrim
+        }
+      });
     }
   };
   return (
@@ -122,7 +116,11 @@ const CheckoutForm = ({cart,price}) => {
         </button>
       </form>
       {cardError && <p className="text-red-600">{cardError}</p>}
-      {tranjuctionId && <p className="text-green-600">Tranjuction Complete with tranjuction_id : {tranjuctionId}</p>}
+      {tranjuctionId && (
+        <p className="text-green-600">
+          Tranjuction Complete with tranjuction_id : {tranjuctionId}
+        </p>
+      )}
     </>
   );
 };
