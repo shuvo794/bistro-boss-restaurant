@@ -1,4 +1,3 @@
-
 import { Parallax } from "react-parallax";
 import chefService from "../../../assets/home/chef-special.jpg";
 const Yeami = () => {
